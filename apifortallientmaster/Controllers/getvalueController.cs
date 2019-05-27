@@ -55,37 +55,37 @@ namespace apifortallientmaster.Controllers
         public List<apiclass> getcountry()
         {
 
-            var deslist = v5.HCM_COUNTRY.Select(x => new apiclass
+            var counlist = v5.HCM_COUNTRY.Select(x => new apiclass
             {
                 rid = x.RID,
                 title = x.Title
             }).ToList();
 
-            return deslist;
+            return counlist;
 
         }
         public List<apiclass> getloction()
         {
 
-            var deslist = v5.HCM_LOCATIONS.Select(x => new apiclass
+            var loclist = v5.HCM_LOCATIONS.Select(x => new apiclass
             {
                 rid = x.RID,
                 title = x.Title
             }).ToList();
 
-            return deslist;
+            return loclist;
 
         }
         public List<apiclass> getskills()
         {
 
-            var deslist = v5.HCM_SKILLS.Select(x => new apiclass
+            var skilllist = v5.HCM_SKILLS.Select(x => new apiclass
             {
                 rid = x.RID,
                 title = x.Title
             }).ToList();
 
-            return deslist;
+            return skilllist;
 
         }
         public List<apiclass> getuni()
