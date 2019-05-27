@@ -1,0 +1,952 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Hirecraftv5Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="HC_RESUME_BANK">
+          <Key>
+            <PropertyRef Name="RID" />
+          </Key>
+          <Property Name="RID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserID" Type="bigint" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedUserID" Type="bigint" Nullable="false" />
+          <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+          <Property Name="CreatedUserID" Type="bigint" Nullable="false" />
+          <Property Name="TotalExp" Type="decimal" Precision="5" Scale="2" />
+          <Property Name="RelevantExp" Type="decimal" Precision="5" Scale="2" />
+          <Property Name="ResSummary" Type="nvarchar(max)" />
+          <Property Name="HotNotes" Type="nvarchar(max)" />
+          <Property Name="IsFresher" Type="bit" Nullable="false" />
+          <Property Name="ResType" Type="smallint" Nullable="false" />
+          <Property Name="NoticePeriod" Type="smallint" />
+          <Property Name="SourceID" Type="bigint" />
+          <Property Name="SourceUserID" Type="bigint" />
+          <Property Name="Status" Type="bit" Nullable="false" />
+          <Property Name="SourceGroupID" Type="bigint" />
+          <Property Name="SourceEmailId" Type="nvarchar" MaxLength="150" />
+          <Property Name="Notes" Type="nvarchar(max)" />
+          <Property Name="ResStatus" Type="smallint" />
+          <Property Name="TID" Type="bigint" Nullable="false" />
+          <Property Name="PresentCurrency" Type="bigint" />
+          <Property Name="PresentCTC" Type="decimal" Precision="18" Scale="9" />
+          <Property Name="PresentScale" Type="bigint" />
+          <Property Name="ExpectedCurrency" Type="bigint" />
+          <Property Name="ExpectedCTC" Type="decimal" Precision="18" Scale="9" />
+          <Property Name="ExpectedScale" Type="bigint" />
+          <Property Name="ResKey" Type="nvarchar" MaxLength="25" />
+          <Property Name="PresentCTCDuration" Type="smallint" />
+          <Property Name="ExpectedCTCDuration" Type="smallint" />
+          <Property Name="CandidateNo" Type="nvarchar" MaxLength="100" />
+          <Property Name="EXTPresentBenefits" Type="nvarchar(max)" />
+          <Property Name="EXTExpectedBenefits" Type="nvarchar(max)" />
+          <Property Name="IsDataSync" Type="bit" Nullable="false" />
+          <Property Name="LastDataSyncDate" Type="datetime" />
+          <Property Name="IsExEmployee" Type="bit" Nullable="false" />
+          <Property Name="ExEmployeeID" Type="nvarchar(max)" />
+          <Property Name="ExEmployeeDeptName" Type="nvarchar(max)" />
+          <Property Name="ExEmployeeLastWorkingDate" Type="datetime" />
+          <Property Name="IsPreviousInterviewee" Type="bit" Nullable="false" />
+          <Property Name="ExInterviewDate" Type="datetime" />
+          <Property Name="ExInvPositionTitle" Type="nvarchar(max)" />
+          <Property Name="CurrentDesignationID" Type="bigint" />
+          <Property Name="TestScore" Type="decimal" Precision="5" Scale="2" />
+          <Property Name="ShiftInterests" Type="smallint" />
+          <Property Name="NightShiftInterest" Type="smallint" />
+          <Property Name="IsReAllocate" Type="smallint" />
+          <Property Name="Work6DaysAWeek" Type="smallint" />
+          <Property Name="RegistrationMode" Type="bigint" />
+          <Property Name="VenueID" Type="bigint" />
+          <Property Name="IsPresent" Type="smallint" Nullable="false" />
+          <Property Name="WorkAuthorization" Type="bigint" />
+          <Property Name="TagCloud" Type="nvarchar(max)" />
+          <Property Name="IndustryID" Type="bigint" />
+          <Property Name="PassportNo" Type="nvarchar(max)" />
+          <Property Name="PanNo" Type="nvarchar(max)" />
+          <Property Name="IsConvertedToEmployee" Type="bit" />
+          <Property Name="ShineID" Type="nvarchar(max)" />
+          <Property Name="DiceID" Type="nvarchar(max)" />
+          <Property Name="CareerBuilderID" Type="nvarchar(max)" />
+          <Property Name="ExtSSNNumber" Type="nvarchar(max)" />
+          <Property Name="TeamID" Type="smallint" />
+          <Property Name="EXTBLOODGROUP" Type="nvarchar(max)" />
+          <Property Name="IsConfidential" Type="bit" Nullable="false" />
+          <Property Name="ExtInvDateTime" Type="datetime" />
+          <Property Name="ExtLocation" Type="nvarchar(max)" />
+          <Property Name="FixedSalary" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="VariableSalary" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="Perks" Type="nvarchar(max)" />
+          <Property Name="AppPanNo" Type="bit" />
+          <Property Name="AppAdharNo" Type="bit" />
+          <Property Name="AdharNo" Type="nvarchar(max)" />
+          <Property Name="ExtDepartment" Type="bigint" />
+          <Property Name="SurName" Type="nvarchar(max)" />
+          <Property Name="Religion" Type="bigint" />
+          <Property Name="AppAadharNo" Type="bit" />
+          <Property Name="AadharNo" Type="nvarchar(max)" />
+          <Property Name="NameAsPerPan" Type="nvarchar(max)" />
+          <Property Name="NameAsPerAadhar" Type="nvarchar(max)" />
+          <Property Name="AnyPrevMedical" Type="bit" />
+          <Property Name="MedicalComments" Type="nvarchar(max)" />
+          <Property Name="CastCategory" Type="bigint" />
+          <Property Name="GapInEmp" Type="bit" />
+          <Property Name="Reason" Type="nvarchar(max)" />
+          <Property Name="isEligible" Type="bit" />
+          <Property Name="isPassportDetails" Type="bit" />
+          <Property Name="CitizenshipId" Type="bigint" />
+          <Property Name="isValidPassport" Type="bit" />
+          <Property Name="GapInMonths" Type="bigint" />
+          <Property Name="ExEmployeeRID" Type="bigint" />
+          <Property Name="CurrentLocation" Type="bigint" />
+          <Property Name="ReasonForLeaving" Type="nvarchar(max)" />
+          <Property Name="RestrictCanLogin" Type="bit" />
+          <Property Name="IsMailSent" Type="bigint" />
+          <Property Name="GapInEdu" Type="bit" />
+          <Property Name="GapInEduReason" Type="nvarchar(max)" />
+          <Property Name="GapInEduInMonths" Type="bigint" />
+          <Property Name="OnBenchStatus" Type="bigint" />
+          <Property Name="SkypeID" Type="nvarchar(max)" />
+          <Property Name="ExtLinkedInProfile" Type="nvarchar(max)" />
+          <Property Name="CanTravel" Type="bit" />
+          <Property Name="EmploymentType" Type="bigint" />
+          <Property Name="Ethnicity" Type="bigint" />
+          <Property Name="ExtRelocation" Type="smallint" />
+          <Property Name="VeteranStatus" Type="bigint" />
+          <Property Name="Disablity" Type="bigint" />
+          <Property Name="Availability" Type="bigint" />
+          <Property Name="Currency" Type="bigint" />
+          <Property Name="Amount" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="Duration" Type="bigint" />
+          <Property Name="extWorkAuthorization" Type="bit" />
+          <Property Name="OriginCountry" Type="bigint" />
+          <Property Name="ImmigrationStatus" Type="bit" />
+          <Property Name="Month" Type="bigint" />
+          <Property Name="Year" Type="bigint" />
+          <Property Name="NANumber" Type="nvarchar(max)" />
+          <Property Name="IsHavingPF" Type="smallint" />
+          <Property Name="PFNumber" Type="nvarchar(max)" />
+          <Property Name="UANNo" Type="nvarchar(max)" />
+          <Property Name="PFDateofExit" Type="datetime" />
+          <Property Name="DateOfMarriage" Type="datetime" />
+          <Property Name="Community" Type="nvarchar(max)" />
+          <Property Name="VIPFlag" Type="nvarchar(max)" />
+          <Property Name="Weight" Type="nvarchar(max)" />
+          <Property Name="NoofChildren" Type="bigint" />
+          <Property Name="IsDisablity" Type="smallint" />
+          <Property Name="DisablityNotes" Type="nvarchar(max)" />
+          <Property Name="ExtHighestqualification" Type="nvarchar(max)" />
+          <Property Name="ExtTechnicalCertication" Type="nvarchar(max)" />
+          <Property Name="ExtValidPassport" Type="bit" />
+          <Property Name="ExtServingNoticeperiod" Type="bit" />
+          <Property Name="NaukriQuestionnaireData" Type="nvarchar(max)" />
+          <Property Name="RelativeWorkingNotes" Type="nvarchar(max)" />
+          <Property Name="RelativeWorking" Type="smallint" />
+          <Property Name="DisciplinaryProcNotes" Type="nvarchar(max)" />
+          <Property Name="DisciplinaryProc" Type="smallint" />
+          <Property Name="CriminalActNotes" Type="nvarchar(max)" />
+          <Property Name="CriminalAct" Type="smallint" />
+          <Property Name="LegalActionNotes" Type="nvarchar(max)" />
+          <Property Name="LegalAction" Type="smallint" />
+          <Property Name="MedIllnessNotes" Type="nvarchar(max)" />
+          <Property Name="MedIllness" Type="smallint" />
+          <Property Name="Disabled" Type="smallint" />
+          <Property Name="AssessmentStatus" Type="smallint" Nullable="false" />
+          <Property Name="ReceiveAlerts" Type="bit" Nullable="false" />
+          <Property Name="ExtRatingID" Type="smallint" />
+          <Property Name="ExtResEStatusID" Type="smallint" />
+          <Property Name="ExtVendorPassthroughID" Type="smallint" />
+          <Property Name="ExtICNumber" Type="nvarchar(max)" />
+          <Property Name="ExtNewICNumber" Type="nvarchar(max)" />
+          <Property Name="ExtNRICNumber" Type="nvarchar(max)" />
+          <Property Name="V5RID" Type="bigint" Nullable="false" />
+          <Property Name="V3V4RID" Type="bigint" />
+          <Property Name="isMigrated" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="MigratedDataFrom" Type="varchar(max)" />
+          <Property Name="ExtResumeSourceID" Type="smallint" />
+          <Property Name="ExAppliedBefore" Type="bit" />
+          <Property Name="ExAppliedMonth" Type="nvarchar(max)" />
+          <Property Name="ExAppliedYear" Type="nvarchar(max)" />
+          <Property Name="ExAnyoneKnown" Type="bit" />
+          <Property Name="ExKnownName" Type="nvarchar(max)" />
+          <Property Name="Strengths" Type="nvarchar(max)" />
+          <Property Name="Improvement" Type="nvarchar(max)" />
+          <Property Name="Hobbies" Type="nvarchar(max)" />
+          <Property Name="FutureYearsMyself" Type="nvarchar(max)" />
+          <Property Name="MigrationStatus" Type="smallint" Nullable="false" />
+          <Property Name="ExtDrawnHike" Type="nvarchar(max)" />
+          <Property Name="ExtFamilyContact" Type="nvarchar(max)" />
+          <Property Name="ExtFriendContact" Type="nvarchar(max)" />
+          <Property Name="EmployeeType" Type="nvarchar(max)" />
+          <Property Name="IsContractJob" Type="smallint" />
+          <Property Name="AdditionalInfo" Type="nvarchar(max)" />
+          <Property Name="CandidateFte" Type="smallint" />
+          <Property Name="IsUnemployed" Type="smallint" />
+          <Property Name="IsUnemployedDesc" Type="nvarchar(max)" />
+          <Property Name="UnemployedFromDate" Type="datetime" />
+          <Property Name="UnemployedToDate" Type="datetime" />
+          <Property Name="IsClientContract" Type="smallint" />
+          <Property Name="Rolesresponsibility" Type="nvarchar(max)" />
+          <Property Name="LastWorkDate" Type="datetime" />
+          <Property Name="ExtPresentCompany" Type="nvarchar(max)" />
+          <Property Name="CanVisaTypeID" Type="bigint" />
+          <Property Name="VisaExpDate" Type="datetime" />
+          <Property Name="ExtExpectedSalaryRange" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="StateID" Type="bigint" />
+          <Property Name="CountryID" Type="bigint" />
+          <Property Name="extupdateaddr" Type="bit" />
+          <Property Name="ExtEmployerName" Type="nvarchar(max)" />
+          <Property Name="ExtIsTACT" Type="bit" />
+          <Property Name="ExtTACTSkill" Type="nvarchar" MaxLength="200" />
+          <Property Name="ExtIsTACTSentMail" Type="bit" />
+          <Property Name="ExtAusDLPassport" Type="nvarchar(max)" />
+          <Property Name="ExtGDPRApplicable" Type="bit" Nullable="false" />
+          <Property Name="ExtGDPRMailSent" Type="smallint" Nullable="false" />
+          <Property Name="ExtGDPRMailSentDate" Type="datetime" />
+          <Property Name="ExtGDPRResponseDate" Type="datetime" />
+          <Property Name="ExtGDPRUK" Type="smallint" Nullable="false" />
+          <Property Name="ExtGDPRPolland" Type="smallint" Nullable="false" />
+          <Property Name="ExtGDPRIreland" Type="smallint" Nullable="false" />
+          <Property Name="GDPREU" Type="smallint" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Hirecraftv5.dbo.HC_USER' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="HC_USER">
+          <Key>
+            <PropertyRef Name="RID" />
+            <PropertyRef Name="UserID" />
+            <PropertyRef Name="RoleID" />
+            <PropertyRef Name="Status" />
+            <PropertyRef Name="TID" />
+          </Key>
+          <Property Name="RID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserID" Type="bigint" Nullable="false" />
+          <Property Name="RoleID" Type="smallint" Nullable="false" />
+          <Property Name="Status" Type="bit" Nullable="false" />
+          <Property Name="TID" Type="bigint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="HC_USER_MAIN">
+          <Key>
+            <PropertyRef Name="RID" />
+          </Key>
+          <Property Name="RID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FirstName" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="50" />
+          <Property Name="MiddleName" Type="nvarchar" MaxLength="50" />
+          <Property Name="EmailID" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="MobileNo" Type="nvarchar" MaxLength="30" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Password" Type="nvarchar" MaxLength="150" Nullable="false" />
+          <Property Name="ReportingToID" Type="bigint" />
+          <Property Name="Status" Type="bit" Nullable="false" />
+          <Property Name="Notes" Type="nvarchar" MaxLength="1000" />
+          <Property Name="CreatedUserID" Type="bigint" Nullable="false" />
+          <Property Name="ModifiedUserID" Type="bigint" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="ModifiedDate" Type="datetime" />
+          <Property Name="TID" Type="bigint" Nullable="false" />
+          <Property Name="LstLgnFailedAttempt" Type="datetime" />
+          <Property Name="LastLoginFailedAttemptCnt" Type="smallint" />
+          <Property Name="LastPasswordExpiryDate" Type="datetime" />
+          <Property Name="IsFirstTimeLogin" Type="smallint" />
+          <Property Name="Salutation" Type="bigint" />
+          <Property Name="PhoneNo" Type="nvarchar" MaxLength="100" />
+          <Property Name="DOB" Type="datetime" />
+          <Property Name="ConfigTemplateID" Type="bigint" Nullable="false" />
+          <Property Name="Photo" Type="nvarchar(max)" />
+          <Property Name="GradeID" Type="bigint" />
+          <Property Name="ForgotPswKey" Type="nvarchar(max)" />
+          <Property Name="IsAdmin" Type="bit" Nullable="false" />
+          <Property Name="DesignationID" Type="bigint" Nullable="false" />
+          <Property Name="GenderID" Type="bigint" />
+          <Property Name="Keys" Type="nvarchar" MaxLength="50" />
+          <Property Name="Pin" Type="bigint" />
+          <Property Name="KeyExpiryTime" Type="datetime" />
+          <Property Name="IsPrimary" Type="bit" Nullable="false" />
+          <Property Name="EmailSignature" Type="nvarchar(max)" />
+          <Property Name="NationalityID" Type="bigint" />
+          <Property Name="IsDataSync" Type="bit" Nullable="false" />
+          <Property Name="LastDataSyncDate" Type="datetime" />
+          <Property Name="TimeZone" Type="bigint" />
+          <Property Name="ContactRoleID" Type="bigint" />
+          <Property Name="LastLoginDate" Type="datetime" />
+          <Property Name="EmployerID" Type="nvarchar(max)" />
+          <Property Name="CalendarDefaultViewId" Type="smallint" />
+          <Property Name="BloodGroupId" Type="bigint" />
+          <Property Name="MobileNoExt" Type="nvarchar(max)" />
+          <Property Name="WorkLocationID" Type="bigint" />
+          <Property Name="MaritalStatus" Type="smallint" />
+          <Property Name="ReportingManagerName" Type="nvarchar(max)" />
+          <Property Name="DigiSignData" Type="nvarchar(max)" />
+          <Property Name="DigiSignPassword" Type="nvarchar(max)" />
+          <Property Name="ActualEmailID" Type="nvarchar(max)" />
+          <Property Name="DigiSignName" Type="nvarchar(max)" />
+          <Property Name="MobileNo2" Type="nvarchar" MaxLength="100" />
+          <Property Name="DOBCityID" Type="bigint" />
+          <Property Name="DOBStateID" Type="bigint" />
+          <Property Name="DOBCountryID" Type="bigint" />
+          <Property Name="FatherName" Type="nvarchar(max)" />
+          <Property Name="PhoneNoExt" Type="nvarchar(max)" />
+          <Property Name="NameAsAadhar" Type="nvarchar(max)" />
+          <Property Name="V4RID" Type="bigint" Nullable="false" />
+          <Property Name="MigratedDataFrom" Type="varchar" MaxLength="100" />
+          <Property Name="V3V4RID" Type="bigint" />
+          <Property Name="isMigrated" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="CurrencyID" Type="bigint" />
+          <Property Name="DateFormat" Type="nvarchar(max)" />
+          <Property Name="DurationID" Type="bigint" />
+          <Property Name="IsPortalId" Type="bigint" />
+        </EntityType>
+        <Function Name="CandidateNumberGeneration" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="MappingId" Type="bigint" Mode="In" />
+        </Function>
+        <Function Name="usp_GetResumeDetailsForDuplicateCheck" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="MobileNo" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="EmailID" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="ResID" Type="bigint" Mode="InOut" />
+        </Function>
+        <EntityContainer Name="Hirecraftv5ModelStoreContainer">
+          <EntitySet Name="HC_RESUME_BANK" EntityType="Self.HC_RESUME_BANK" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HC_USER_MAIN" EntityType="Self.HC_USER_MAIN" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HC_USER" EntityType="Self.HC_USER" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [HC_USER].[RID] AS [RID], 
+    [HC_USER].[UserID] AS [UserID], 
+    [HC_USER].[RoleID] AS [RoleID], 
+    [HC_USER].[Status] AS [Status], 
+    [HC_USER].[TID] AS [TID]
+    FROM [dbo].[HC_USER] AS [HC_USER]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Hirecraftv5Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="HC_RESUME_BANK">
+          <Key>
+            <PropertyRef Name="RID" />
+          </Key>
+          <Property Name="RID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserID" Type="Int64" Nullable="false" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifiedUserID" Type="Int64" Nullable="false" />
+          <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CreatedUserID" Type="Int64" Nullable="false" />
+          <Property Name="TotalExp" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="RelevantExp" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="ResSummary" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="HotNotes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IsFresher" Type="Boolean" Nullable="false" />
+          <Property Name="ResType" Type="Int16" Nullable="false" />
+          <Property Name="NoticePeriod" Type="Int16" />
+          <Property Name="SourceID" Type="Int64" />
+          <Property Name="SourceUserID" Type="Int64" />
+          <Property Name="Status" Type="Boolean" Nullable="false" />
+          <Property Name="SourceGroupID" Type="Int64" />
+          <Property Name="SourceEmailId" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="Notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ResStatus" Type="Int16" />
+          <Property Name="TID" Type="Int64" Nullable="false" />
+          <Property Name="PresentCurrency" Type="Int64" />
+          <Property Name="PresentCTC" Type="Decimal" Precision="18" Scale="9" />
+          <Property Name="PresentScale" Type="Int64" />
+          <Property Name="ExpectedCurrency" Type="Int64" />
+          <Property Name="ExpectedCTC" Type="Decimal" Precision="18" Scale="9" />
+          <Property Name="ExpectedScale" Type="Int64" />
+          <Property Name="ResKey" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="PresentCTCDuration" Type="Int16" />
+          <Property Name="ExpectedCTCDuration" Type="Int16" />
+          <Property Name="CandidateNo" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="EXTPresentBenefits" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="EXTExpectedBenefits" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IsDataSync" Type="Boolean" Nullable="false" />
+          <Property Name="LastDataSyncDate" Type="DateTime" Precision="3" />
+          <Property Name="IsExEmployee" Type="Boolean" Nullable="false" />
+          <Property Name="ExEmployeeID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ExEmployeeDeptName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ExEmployeeLastWorkingDate" Type="DateTime" Precision="3" />
+          <Property Name="IsPreviousInterviewee" Type="Boolean" Nullable="false" />
+          <Property Name="ExInterviewDate" Type="DateTime" Precision="3" />
+          <Property Name="ExInvPositionTitle" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CurrentDesignationID" Type="Int64" />
+          <Property Name="TestScore" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="ShiftInterests" Type="Int16" />
+          <Property Name="NightShiftInterest" Type="Int16" />
+          <Property Name="IsReAllocate" Type="Int16" />
+          <Property Name="Work6DaysAWeek" Type="Int16" />
+          <Property Name="RegistrationMode" Type="Int64" />
+          <Property Name="VenueID" Type="Int64" />
+          <Property Name="IsPresent" Type="Int16" Nullable="false" />
+          <Property Name="WorkAuthorization" Type="Int64" />
+          <Property Name="TagCloud" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IndustryID" Type="Int64" />
+          <Property Name="PassportNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PanNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IsConvertedToEmployee" Type="Boolean" />
+          <Property Name="ShineID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DiceID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CareerBuilderID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ExtSSNNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="TeamID" Type="Int16" />
+          <Property Name="EXTBLOODGROUP" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IsConfidential" Type="Boolean" Nullable="false" />
+          <Property Name="ExtInvDateTime" Type="DateTime" Precision="3" />
+          <Property Name="ExtLocation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="FixedSalary" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="VariableSalary" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="Perks" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="AppPanNo" Type="Boolean" />
+          <Property Name="AppAdharNo" Type="Boolean" />
+          <Property Name="AdharNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ExtDepartment" Type="Int64" />
+          <Property Name="SurName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Religion" Type="Int64" />
+          <Property Name="AppAadharNo" Type="Boolean" />
+          <Property Name="AadharNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="NameAsPerPan" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="NameAsPerAadhar" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="AnyPrevMedical" Type="Boolean" />
+          <Property Name="MedicalComments" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CastCategory" Type="Int64" />
+          <Property Name="GapInEmp" Type="Boolean" />
+          <Property Name="Reason" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="isEligible" Type="Boolean" />
+          <Property Name="isPassportDetails" Type="Boolean" />
+          <Property Name="CitizenshipId" Type="Int64" />
+          <Property Name="isValidPassport" Type="Boolean" />
+          <Property Name="GapInMonths" Type="Int64" />
+          <Property Name="ExEmployeeRID" Type="Int64" />
+          <Property Name="CurrentLocation" Type="Int64" />
+          <Property Name="ReasonForLeaving" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="RestrictCanLogin" Type="Boolean" />
+          <Property Name="IsMailSent" Type="Int64" />
+          <Property Name="GapInEdu" Type="Boolean" />
+          <Property Name="GapInEduReason" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="GapInEduInMonths" Type="Int64" />
+          <Property Name="OnBenchStatus" Type="Int64" />
+          <Property Name="SkypeID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ExtLinkedInProfile" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CanTravel" Type="Boolean" />
+          <Property Name="EmploymentType" Type="Int64" />
+          <Property Name="Ethnicity" Type="Int64" />
+          <Property Name="ExtRelocation" Type="Int16" />
+          <Property Name="VeteranStatus" Type="Int64" />
+          <Property Name="Disablity" Type="Int64" />
+          <Property Name="Availability" Type="Int64" />
+          <Property Name="Currency" Type="Int64" />
+          <Property Name="Amount" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="Duration" Type="Int64" />
+          <Property Name="extWorkAuthorization" Type="Boolean" />
+          <Property Name="OriginCountry" Type="Int64" />
+          <Property Name="ImmigrationStatus" Type="Boolean" />
+          <Property Name="Month" Type="Int64" />
+          <Property Name="Year" Type="Int64" />
+          <Property Name="NANumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IsHavingPF" Type="Int16" />
+          <Property Name="PFNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="UANNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PFDateofExit" Type="DateTime" Precision="3" />
+          <Property Name="DateOfMarriage" Type="DateTime" Precision="3" />
+          <Property Name="Community" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="VIPFlag" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Weight" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="NoofChildren" Type="Int64" />
+          <Property Name="IsDisablity" Type="Int16" />
+          <Property Name="DisablityNotes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ExtHighestqualification" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ExtTechnicalCertication" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ExtValidPassport" Type="Boolean" />
+          <Property Name="ExtServingNoticeperiod" Type="Boolean" />
+          <Property Name="NaukriQuestionnaireData" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="RelativeWorkingNotes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="RelativeWorking" Type="Int16" />
+          <Property Name="DisciplinaryProcNotes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DisciplinaryProc" Type="Int16" />
+          <Property Name="CriminalActNotes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CriminalAct" Type="Int16" />
+          <Property Name="LegalActionNotes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="LegalAction" Type="Int16" />
+          <Property Name="MedIllnessNotes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MedIllness" Type="Int16" />
+          <Property Name="Disabled" Type="Int16" />
+          <Property Name="AssessmentStatus" Type="Int16" Nullable="false" />
+          <Property Name="ReceiveAlerts" Type="Boolean" Nullable="false" />
+          <Property Name="ExtRatingID" Type="Int16" />
+          <Property Name="ExtResEStatusID" Type="Int16" />
+          <Property Name="ExtVendorPassthroughID" Type="Int16" />
+          <Property Name="ExtICNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ExtNewICNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ExtNRICNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="V5RID" Type="Int64" Nullable="false" />
+          <Property Name="V3V4RID" Type="Int64" />
+          <Property Name="isMigrated" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="MigratedDataFrom" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="ExtResumeSourceID" Type="Int16" />
+          <Property Name="ExAppliedBefore" Type="Boolean" />
+          <Property Name="ExAppliedMonth" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ExAppliedYear" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ExAnyoneKnown" Type="Boolean" />
+          <Property Name="ExKnownName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Strengths" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Improvement" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Hobbies" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="FutureYearsMyself" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MigrationStatus" Type="Int16" Nullable="false" />
+          <Property Name="ExtDrawnHike" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ExtFamilyContact" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ExtFriendContact" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="EmployeeType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IsContractJob" Type="Int16" />
+          <Property Name="AdditionalInfo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CandidateFte" Type="Int16" />
+          <Property Name="IsUnemployed" Type="Int16" />
+          <Property Name="IsUnemployedDesc" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="UnemployedFromDate" Type="DateTime" Precision="3" />
+          <Property Name="UnemployedToDate" Type="DateTime" Precision="3" />
+          <Property Name="IsClientContract" Type="Int16" />
+          <Property Name="Rolesresponsibility" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="LastWorkDate" Type="DateTime" Precision="3" />
+          <Property Name="ExtPresentCompany" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CanVisaTypeID" Type="Int64" />
+          <Property Name="VisaExpDate" Type="DateTime" Precision="3" />
+          <Property Name="ExtExpectedSalaryRange" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="StateID" Type="Int64" />
+          <Property Name="CountryID" Type="Int64" />
+          <Property Name="extupdateaddr" Type="Boolean" />
+          <Property Name="ExtEmployerName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ExtIsTACT" Type="Boolean" />
+          <Property Name="ExtTACTSkill" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="ExtIsTACTSentMail" Type="Boolean" />
+          <Property Name="ExtAusDLPassport" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ExtGDPRApplicable" Type="Boolean" Nullable="false" />
+          <Property Name="ExtGDPRMailSent" Type="Int16" Nullable="false" />
+          <Property Name="ExtGDPRMailSentDate" Type="DateTime" Precision="3" />
+          <Property Name="ExtGDPRResponseDate" Type="DateTime" Precision="3" />
+          <Property Name="ExtGDPRUK" Type="Int16" Nullable="false" />
+          <Property Name="ExtGDPRPolland" Type="Int16" Nullable="false" />
+          <Property Name="ExtGDPRIreland" Type="Int16" Nullable="false" />
+          <Property Name="GDPREU" Type="Int16" Nullable="false" />
+        </EntityType>
+        <EntityType Name="HC_USER_MAIN">
+          <Key>
+            <PropertyRef Name="RID" />
+          </Key>
+          <Property Name="RID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FirstName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MiddleName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="EmailID" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="MobileNo" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Password" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ReportingToID" Type="Int64" />
+          <Property Name="Status" Type="Boolean" Nullable="false" />
+          <Property Name="Notes" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedUserID" Type="Int64" Nullable="false" />
+          <Property Name="ModifiedUserID" Type="Int64" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+          <Property Name="TID" Type="Int64" Nullable="false" />
+          <Property Name="LstLgnFailedAttempt" Type="DateTime" Precision="3" />
+          <Property Name="LastLoginFailedAttemptCnt" Type="Int16" />
+          <Property Name="LastPasswordExpiryDate" Type="DateTime" Precision="3" />
+          <Property Name="IsFirstTimeLogin" Type="Int16" />
+          <Property Name="Salutation" Type="Int64" />
+          <Property Name="PhoneNo" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="DOB" Type="DateTime" Precision="3" />
+          <Property Name="ConfigTemplateID" Type="Int64" Nullable="false" />
+          <Property Name="Photo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="GradeID" Type="Int64" />
+          <Property Name="ForgotPswKey" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IsAdmin" Type="Boolean" Nullable="false" />
+          <Property Name="DesignationID" Type="Int64" Nullable="false" />
+          <Property Name="GenderID" Type="Int64" />
+          <Property Name="Keys" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Pin" Type="Int64" />
+          <Property Name="KeyExpiryTime" Type="DateTime" Precision="3" />
+          <Property Name="IsPrimary" Type="Boolean" Nullable="false" />
+          <Property Name="EmailSignature" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="NationalityID" Type="Int64" />
+          <Property Name="IsDataSync" Type="Boolean" Nullable="false" />
+          <Property Name="LastDataSyncDate" Type="DateTime" Precision="3" />
+          <Property Name="TimeZone" Type="Int64" />
+          <Property Name="ContactRoleID" Type="Int64" />
+          <Property Name="LastLoginDate" Type="DateTime" Precision="3" />
+          <Property Name="EmployerID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CalendarDefaultViewId" Type="Int16" />
+          <Property Name="BloodGroupId" Type="Int64" />
+          <Property Name="MobileNoExt" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="WorkLocationID" Type="Int64" />
+          <Property Name="MaritalStatus" Type="Int16" />
+          <Property Name="ReportingManagerName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DigiSignData" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DigiSignPassword" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ActualEmailID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DigiSignName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MobileNo2" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="DOBCityID" Type="Int64" />
+          <Property Name="DOBStateID" Type="Int64" />
+          <Property Name="DOBCountryID" Type="Int64" />
+          <Property Name="FatherName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PhoneNoExt" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="NameAsAadhar" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="V4RID" Type="Int64" Nullable="false" />
+          <Property Name="MigratedDataFrom" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="V3V4RID" Type="Int64" />
+          <Property Name="isMigrated" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="CurrencyID" Type="Int64" />
+          <Property Name="DateFormat" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DurationID" Type="Int64" />
+          <Property Name="IsPortalId" Type="Int64" />
+        </EntityType>
+        <EntityType Name="HC_USER">
+          <Key>
+            <PropertyRef Name="RID" />
+            <PropertyRef Name="UserID" />
+            <PropertyRef Name="RoleID" />
+            <PropertyRef Name="Status" />
+            <PropertyRef Name="TID" />
+          </Key>
+          <Property Name="RID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserID" Type="Int64" Nullable="false" />
+          <Property Name="RoleID" Type="Int16" Nullable="false" />
+          <Property Name="Status" Type="Boolean" Nullable="false" />
+          <Property Name="TID" Type="Int64" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="Hirecraftv5Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="HC_RESUME_BANK" EntityType="Self.HC_RESUME_BANK" />
+          <EntitySet Name="HC_USER_MAIN" EntityType="Self.HC_USER_MAIN" />
+          <EntitySet Name="HC_USER" EntityType="Self.HC_USER" />
+          <FunctionImport Name="CandidateNumberGeneration">
+            <Parameter Name="MappingId" Mode="In" Type="Int64" />
+          </FunctionImport>
+          <FunctionImport Name="usp_GetResumeDetailsForDuplicateCheck">
+            <Parameter Name="MobileNo" Mode="In" Type="String" />
+            <Parameter Name="EmailID" Mode="In" Type="String" />
+            <Parameter Name="ResID" Mode="InOut" Type="Int64" />
+          </FunctionImport>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Hirecraftv5ModelStoreContainer" CdmEntityContainer="Hirecraftv5Entities">
+          <EntitySetMapping Name="HC_RESUME_BANK">
+            <EntityTypeMapping TypeName="Hirecraftv5Model.HC_RESUME_BANK">
+              <MappingFragment StoreEntitySet="HC_RESUME_BANK">
+                <ScalarProperty Name="RID" ColumnName="RID" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ModifiedUserID" ColumnName="ModifiedUserID" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="CreatedUserID" ColumnName="CreatedUserID" />
+                <ScalarProperty Name="TotalExp" ColumnName="TotalExp" />
+                <ScalarProperty Name="RelevantExp" ColumnName="RelevantExp" />
+                <ScalarProperty Name="ResSummary" ColumnName="ResSummary" />
+                <ScalarProperty Name="HotNotes" ColumnName="HotNotes" />
+                <ScalarProperty Name="IsFresher" ColumnName="IsFresher" />
+                <ScalarProperty Name="ResType" ColumnName="ResType" />
+                <ScalarProperty Name="NoticePeriod" ColumnName="NoticePeriod" />
+                <ScalarProperty Name="SourceID" ColumnName="SourceID" />
+                <ScalarProperty Name="SourceUserID" ColumnName="SourceUserID" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="SourceGroupID" ColumnName="SourceGroupID" />
+                <ScalarProperty Name="SourceEmailId" ColumnName="SourceEmailId" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+                <ScalarProperty Name="ResStatus" ColumnName="ResStatus" />
+                <ScalarProperty Name="TID" ColumnName="TID" />
+                <ScalarProperty Name="PresentCurrency" ColumnName="PresentCurrency" />
+                <ScalarProperty Name="PresentCTC" ColumnName="PresentCTC" />
+                <ScalarProperty Name="PresentScale" ColumnName="PresentScale" />
+                <ScalarProperty Name="ExpectedCurrency" ColumnName="ExpectedCurrency" />
+                <ScalarProperty Name="ExpectedCTC" ColumnName="ExpectedCTC" />
+                <ScalarProperty Name="ExpectedScale" ColumnName="ExpectedScale" />
+                <ScalarProperty Name="ResKey" ColumnName="ResKey" />
+                <ScalarProperty Name="PresentCTCDuration" ColumnName="PresentCTCDuration" />
+                <ScalarProperty Name="ExpectedCTCDuration" ColumnName="ExpectedCTCDuration" />
+                <ScalarProperty Name="CandidateNo" ColumnName="CandidateNo" />
+                <ScalarProperty Name="EXTPresentBenefits" ColumnName="EXTPresentBenefits" />
+                <ScalarProperty Name="EXTExpectedBenefits" ColumnName="EXTExpectedBenefits" />
+                <ScalarProperty Name="IsDataSync" ColumnName="IsDataSync" />
+                <ScalarProperty Name="LastDataSyncDate" ColumnName="LastDataSyncDate" />
+                <ScalarProperty Name="IsExEmployee" ColumnName="IsExEmployee" />
+                <ScalarProperty Name="ExEmployeeID" ColumnName="ExEmployeeID" />
+                <ScalarProperty Name="ExEmployeeDeptName" ColumnName="ExEmployeeDeptName" />
+                <ScalarProperty Name="ExEmployeeLastWorkingDate" ColumnName="ExEmployeeLastWorkingDate" />
+                <ScalarProperty Name="IsPreviousInterviewee" ColumnName="IsPreviousInterviewee" />
+                <ScalarProperty Name="ExInterviewDate" ColumnName="ExInterviewDate" />
+                <ScalarProperty Name="ExInvPositionTitle" ColumnName="ExInvPositionTitle" />
+                <ScalarProperty Name="CurrentDesignationID" ColumnName="CurrentDesignationID" />
+                <ScalarProperty Name="TestScore" ColumnName="TestScore" />
+                <ScalarProperty Name="ShiftInterests" ColumnName="ShiftInterests" />
+                <ScalarProperty Name="NightShiftInterest" ColumnName="NightShiftInterest" />
+                <ScalarProperty Name="IsReAllocate" ColumnName="IsReAllocate" />
+                <ScalarProperty Name="Work6DaysAWeek" ColumnName="Work6DaysAWeek" />
+                <ScalarProperty Name="RegistrationMode" ColumnName="RegistrationMode" />
+                <ScalarProperty Name="VenueID" ColumnName="VenueID" />
+                <ScalarProperty Name="IsPresent" ColumnName="IsPresent" />
+                <ScalarProperty Name="WorkAuthorization" ColumnName="WorkAuthorization" />
+                <ScalarProperty Name="TagCloud" ColumnName="TagCloud" />
+                <ScalarProperty Name="IndustryID" ColumnName="IndustryID" />
+                <ScalarProperty Name="PassportNo" ColumnName="PassportNo" />
+                <ScalarProperty Name="PanNo" ColumnName="PanNo" />
+                <ScalarProperty Name="IsConvertedToEmployee" ColumnName="IsConvertedToEmployee" />
+                <ScalarProperty Name="ShineID" ColumnName="ShineID" />
+                <ScalarProperty Name="DiceID" ColumnName="DiceID" />
+                <ScalarProperty Name="CareerBuilderID" ColumnName="CareerBuilderID" />
+                <ScalarProperty Name="ExtSSNNumber" ColumnName="ExtSSNNumber" />
+                <ScalarProperty Name="TeamID" ColumnName="TeamID" />
+                <ScalarProperty Name="EXTBLOODGROUP" ColumnName="EXTBLOODGROUP" />
+                <ScalarProperty Name="IsConfidential" ColumnName="IsConfidential" />
+                <ScalarProperty Name="ExtInvDateTime" ColumnName="ExtInvDateTime" />
+                <ScalarProperty Name="ExtLocation" ColumnName="ExtLocation" />
+                <ScalarProperty Name="FixedSalary" ColumnName="FixedSalary" />
+                <ScalarProperty Name="VariableSalary" ColumnName="VariableSalary" />
+                <ScalarProperty Name="Perks" ColumnName="Perks" />
+                <ScalarProperty Name="AppPanNo" ColumnName="AppPanNo" />
+                <ScalarProperty Name="AppAdharNo" ColumnName="AppAdharNo" />
+                <ScalarProperty Name="AdharNo" ColumnName="AdharNo" />
+                <ScalarProperty Name="ExtDepartment" ColumnName="ExtDepartment" />
+                <ScalarProperty Name="SurName" ColumnName="SurName" />
+                <ScalarProperty Name="Religion" ColumnName="Religion" />
+                <ScalarProperty Name="AppAadharNo" ColumnName="AppAadharNo" />
+                <ScalarProperty Name="AadharNo" ColumnName="AadharNo" />
+                <ScalarProperty Name="NameAsPerPan" ColumnName="NameAsPerPan" />
+                <ScalarProperty Name="NameAsPerAadhar" ColumnName="NameAsPerAadhar" />
+                <ScalarProperty Name="AnyPrevMedical" ColumnName="AnyPrevMedical" />
+                <ScalarProperty Name="MedicalComments" ColumnName="MedicalComments" />
+                <ScalarProperty Name="CastCategory" ColumnName="CastCategory" />
+                <ScalarProperty Name="GapInEmp" ColumnName="GapInEmp" />
+                <ScalarProperty Name="Reason" ColumnName="Reason" />
+                <ScalarProperty Name="isEligible" ColumnName="isEligible" />
+                <ScalarProperty Name="isPassportDetails" ColumnName="isPassportDetails" />
+                <ScalarProperty Name="CitizenshipId" ColumnName="CitizenshipId" />
+                <ScalarProperty Name="isValidPassport" ColumnName="isValidPassport" />
+                <ScalarProperty Name="GapInMonths" ColumnName="GapInMonths" />
+                <ScalarProperty Name="ExEmployeeRID" ColumnName="ExEmployeeRID" />
+                <ScalarProperty Name="CurrentLocation" ColumnName="CurrentLocation" />
+                <ScalarProperty Name="ReasonForLeaving" ColumnName="ReasonForLeaving" />
+                <ScalarProperty Name="RestrictCanLogin" ColumnName="RestrictCanLogin" />
+                <ScalarProperty Name="IsMailSent" ColumnName="IsMailSent" />
+                <ScalarProperty Name="GapInEdu" ColumnName="GapInEdu" />
+                <ScalarProperty Name="GapInEduReason" ColumnName="GapInEduReason" />
+                <ScalarProperty Name="GapInEduInMonths" ColumnName="GapInEduInMonths" />
+                <ScalarProperty Name="OnBenchStatus" ColumnName="OnBenchStatus" />
+                <ScalarProperty Name="SkypeID" ColumnName="SkypeID" />
+                <ScalarProperty Name="ExtLinkedInProfile" ColumnName="ExtLinkedInProfile" />
+                <ScalarProperty Name="CanTravel" ColumnName="CanTravel" />
+                <ScalarProperty Name="EmploymentType" ColumnName="EmploymentType" />
+                <ScalarProperty Name="Ethnicity" ColumnName="Ethnicity" />
+                <ScalarProperty Name="ExtRelocation" ColumnName="ExtRelocation" />
+                <ScalarProperty Name="VeteranStatus" ColumnName="VeteranStatus" />
+                <ScalarProperty Name="Disablity" ColumnName="Disablity" />
+                <ScalarProperty Name="Availability" ColumnName="Availability" />
+                <ScalarProperty Name="Currency" ColumnName="Currency" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="Duration" ColumnName="Duration" />
+                <ScalarProperty Name="extWorkAuthorization" ColumnName="extWorkAuthorization" />
+                <ScalarProperty Name="OriginCountry" ColumnName="OriginCountry" />
+                <ScalarProperty Name="ImmigrationStatus" ColumnName="ImmigrationStatus" />
+                <ScalarProperty Name="Month" ColumnName="Month" />
+                <ScalarProperty Name="Year" ColumnName="Year" />
+                <ScalarProperty Name="NANumber" ColumnName="NANumber" />
+                <ScalarProperty Name="IsHavingPF" ColumnName="IsHavingPF" />
+                <ScalarProperty Name="PFNumber" ColumnName="PFNumber" />
+                <ScalarProperty Name="UANNo" ColumnName="UANNo" />
+                <ScalarProperty Name="PFDateofExit" ColumnName="PFDateofExit" />
+                <ScalarProperty Name="DateOfMarriage" ColumnName="DateOfMarriage" />
+                <ScalarProperty Name="Community" ColumnName="Community" />
+                <ScalarProperty Name="VIPFlag" ColumnName="VIPFlag" />
+                <ScalarProperty Name="Weight" ColumnName="Weight" />
+                <ScalarProperty Name="NoofChildren" ColumnName="NoofChildren" />
+                <ScalarProperty Name="IsDisablity" ColumnName="IsDisablity" />
+                <ScalarProperty Name="DisablityNotes" ColumnName="DisablityNotes" />
+                <ScalarProperty Name="ExtHighestqualification" ColumnName="ExtHighestqualification" />
+                <ScalarProperty Name="ExtTechnicalCertication" ColumnName="ExtTechnicalCertication" />
+                <ScalarProperty Name="ExtValidPassport" ColumnName="ExtValidPassport" />
+                <ScalarProperty Name="ExtServingNoticeperiod" ColumnName="ExtServingNoticeperiod" />
+                <ScalarProperty Name="NaukriQuestionnaireData" ColumnName="NaukriQuestionnaireData" />
+                <ScalarProperty Name="RelativeWorkingNotes" ColumnName="RelativeWorkingNotes" />
+                <ScalarProperty Name="RelativeWorking" ColumnName="RelativeWorking" />
+                <ScalarProperty Name="DisciplinaryProcNotes" ColumnName="DisciplinaryProcNotes" />
+                <ScalarProperty Name="DisciplinaryProc" ColumnName="DisciplinaryProc" />
+                <ScalarProperty Name="CriminalActNotes" ColumnName="CriminalActNotes" />
+                <ScalarProperty Name="CriminalAct" ColumnName="CriminalAct" />
+                <ScalarProperty Name="LegalActionNotes" ColumnName="LegalActionNotes" />
+                <ScalarProperty Name="LegalAction" ColumnName="LegalAction" />
+                <ScalarProperty Name="MedIllnessNotes" ColumnName="MedIllnessNotes" />
+                <ScalarProperty Name="MedIllness" ColumnName="MedIllness" />
+                <ScalarProperty Name="Disabled" ColumnName="Disabled" />
+                <ScalarProperty Name="AssessmentStatus" ColumnName="AssessmentStatus" />
+                <ScalarProperty Name="ReceiveAlerts" ColumnName="ReceiveAlerts" />
+                <ScalarProperty Name="ExtRatingID" ColumnName="ExtRatingID" />
+                <ScalarProperty Name="ExtResEStatusID" ColumnName="ExtResEStatusID" />
+                <ScalarProperty Name="ExtVendorPassthroughID" ColumnName="ExtVendorPassthroughID" />
+                <ScalarProperty Name="ExtICNumber" ColumnName="ExtICNumber" />
+                <ScalarProperty Name="ExtNewICNumber" ColumnName="ExtNewICNumber" />
+                <ScalarProperty Name="ExtNRICNumber" ColumnName="ExtNRICNumber" />
+                <ScalarProperty Name="V5RID" ColumnName="V5RID" />
+                <ScalarProperty Name="V3V4RID" ColumnName="V3V4RID" />
+                <ScalarProperty Name="isMigrated" ColumnName="isMigrated" />
+                <ScalarProperty Name="MigratedDataFrom" ColumnName="MigratedDataFrom" />
+                <ScalarProperty Name="ExtResumeSourceID" ColumnName="ExtResumeSourceID" />
+                <ScalarProperty Name="ExAppliedBefore" ColumnName="ExAppliedBefore" />
+                <ScalarProperty Name="ExAppliedMonth" ColumnName="ExAppliedMonth" />
+                <ScalarProperty Name="ExAppliedYear" ColumnName="ExAppliedYear" />
+                <ScalarProperty Name="ExAnyoneKnown" ColumnName="ExAnyoneKnown" />
+                <ScalarProperty Name="ExKnownName" ColumnName="ExKnownName" />
+                <ScalarProperty Name="Strengths" ColumnName="Strengths" />
+                <ScalarProperty Name="Improvement" ColumnName="Improvement" />
+                <ScalarProperty Name="Hobbies" ColumnName="Hobbies" />
+                <ScalarProperty Name="FutureYearsMyself" ColumnName="FutureYearsMyself" />
+                <ScalarProperty Name="MigrationStatus" ColumnName="MigrationStatus" />
+                <ScalarProperty Name="ExtDrawnHike" ColumnName="ExtDrawnHike" />
+                <ScalarProperty Name="ExtFamilyContact" ColumnName="ExtFamilyContact" />
+                <ScalarProperty Name="ExtFriendContact" ColumnName="ExtFriendContact" />
+                <ScalarProperty Name="EmployeeType" ColumnName="EmployeeType" />
+                <ScalarProperty Name="IsContractJob" ColumnName="IsContractJob" />
+                <ScalarProperty Name="AdditionalInfo" ColumnName="AdditionalInfo" />
+                <ScalarProperty Name="CandidateFte" ColumnName="CandidateFte" />
+                <ScalarProperty Name="IsUnemployed" ColumnName="IsUnemployed" />
+                <ScalarProperty Name="IsUnemployedDesc" ColumnName="IsUnemployedDesc" />
+                <ScalarProperty Name="UnemployedFromDate" ColumnName="UnemployedFromDate" />
+                <ScalarProperty Name="UnemployedToDate" ColumnName="UnemployedToDate" />
+                <ScalarProperty Name="IsClientContract" ColumnName="IsClientContract" />
+                <ScalarProperty Name="Rolesresponsibility" ColumnName="Rolesresponsibility" />
+                <ScalarProperty Name="LastWorkDate" ColumnName="LastWorkDate" />
+                <ScalarProperty Name="ExtPresentCompany" ColumnName="ExtPresentCompany" />
+                <ScalarProperty Name="CanVisaTypeID" ColumnName="CanVisaTypeID" />
+                <ScalarProperty Name="VisaExpDate" ColumnName="VisaExpDate" />
+                <ScalarProperty Name="ExtExpectedSalaryRange" ColumnName="ExtExpectedSalaryRange" />
+                <ScalarProperty Name="StateID" ColumnName="StateID" />
+                <ScalarProperty Name="CountryID" ColumnName="CountryID" />
+                <ScalarProperty Name="extupdateaddr" ColumnName="extupdateaddr" />
+                <ScalarProperty Name="ExtEmployerName" ColumnName="ExtEmployerName" />
+                <ScalarProperty Name="ExtIsTACT" ColumnName="ExtIsTACT" />
+                <ScalarProperty Name="ExtTACTSkill" ColumnName="ExtTACTSkill" />
+                <ScalarProperty Name="ExtIsTACTSentMail" ColumnName="ExtIsTACTSentMail" />
+                <ScalarProperty Name="ExtAusDLPassport" ColumnName="ExtAusDLPassport" />
+                <ScalarProperty Name="ExtGDPRApplicable" ColumnName="ExtGDPRApplicable" />
+                <ScalarProperty Name="ExtGDPRMailSent" ColumnName="ExtGDPRMailSent" />
+                <ScalarProperty Name="ExtGDPRMailSentDate" ColumnName="ExtGDPRMailSentDate" />
+                <ScalarProperty Name="ExtGDPRResponseDate" ColumnName="ExtGDPRResponseDate" />
+                <ScalarProperty Name="ExtGDPRUK" ColumnName="ExtGDPRUK" />
+                <ScalarProperty Name="ExtGDPRPolland" ColumnName="ExtGDPRPolland" />
+                <ScalarProperty Name="ExtGDPRIreland" ColumnName="ExtGDPRIreland" />
+                <ScalarProperty Name="GDPREU" ColumnName="GDPREU" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HC_USER_MAIN">
+            <EntityTypeMapping TypeName="Hirecraftv5Model.HC_USER_MAIN">
+              <MappingFragment StoreEntitySet="HC_USER_MAIN">
+                <ScalarProperty Name="RID" ColumnName="RID" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="MiddleName" ColumnName="MiddleName" />
+                <ScalarProperty Name="EmailID" ColumnName="EmailID" />
+                <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="ReportingToID" ColumnName="ReportingToID" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+                <ScalarProperty Name="CreatedUserID" ColumnName="CreatedUserID" />
+                <ScalarProperty Name="ModifiedUserID" ColumnName="ModifiedUserID" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="TID" ColumnName="TID" />
+                <ScalarProperty Name="LstLgnFailedAttempt" ColumnName="LstLgnFailedAttempt" />
+                <ScalarProperty Name="LastLoginFailedAttemptCnt" ColumnName="LastLoginFailedAttemptCnt" />
+                <ScalarProperty Name="LastPasswordExpiryDate" ColumnName="LastPasswordExpiryDate" />
+                <ScalarProperty Name="IsFirstTimeLogin" ColumnName="IsFirstTimeLogin" />
+                <ScalarProperty Name="Salutation" ColumnName="Salutation" />
+                <ScalarProperty Name="PhoneNo" ColumnName="PhoneNo" />
+                <ScalarProperty Name="DOB" ColumnName="DOB" />
+                <ScalarProperty Name="ConfigTemplateID" ColumnName="ConfigTemplateID" />
+                <ScalarProperty Name="Photo" ColumnName="Photo" />
+                <ScalarProperty Name="GradeID" ColumnName="GradeID" />
+                <ScalarProperty Name="ForgotPswKey" ColumnName="ForgotPswKey" />
+                <ScalarProperty Name="IsAdmin" ColumnName="IsAdmin" />
+                <ScalarProperty Name="DesignationID" ColumnName="DesignationID" />
+                <ScalarProperty Name="GenderID" ColumnName="GenderID" />
+                <ScalarProperty Name="Keys" ColumnName="Keys" />
+                <ScalarProperty Name="Pin" ColumnName="Pin" />
+                <ScalarProperty Name="KeyExpiryTime" ColumnName="KeyExpiryTime" />
+                <ScalarProperty Name="IsPrimary" ColumnName="IsPrimary" />
+                <ScalarProperty Name="EmailSignature" ColumnName="EmailSignature" />
+                <ScalarProperty Name="NationalityID" ColumnName="NationalityID" />
+                <ScalarProperty Name="IsDataSync" ColumnName="IsDataSync" />
+                <ScalarProperty Name="LastDataSyncDate" ColumnName="LastDataSyncDate" />
+                <ScalarProperty Name="TimeZone" ColumnName="TimeZone" />
+                <ScalarProperty Name="ContactRoleID" ColumnName="ContactRoleID" />
+                <ScalarProperty Name="LastLoginDate" ColumnName="LastLoginDate" />
+                <ScalarProperty Name="EmployerID" ColumnName="EmployerID" />
+                <ScalarProperty Name="CalendarDefaultViewId" ColumnName="CalendarDefaultViewId" />
+                <ScalarProperty Name="BloodGroupId" ColumnName="BloodGroupId" />
+                <ScalarProperty Name="MobileNoExt" ColumnName="MobileNoExt" />
+                <ScalarProperty Name="WorkLocationID" ColumnName="WorkLocationID" />
+                <ScalarProperty Name="MaritalStatus" ColumnName="MaritalStatus" />
+                <ScalarProperty Name="ReportingManagerName" ColumnName="ReportingManagerName" />
+                <ScalarProperty Name="DigiSignData" ColumnName="DigiSignData" />
+                <ScalarProperty Name="DigiSignPassword" ColumnName="DigiSignPassword" />
+                <ScalarProperty Name="ActualEmailID" ColumnName="ActualEmailID" />
+                <ScalarProperty Name="DigiSignName" ColumnName="DigiSignName" />
+                <ScalarProperty Name="MobileNo2" ColumnName="MobileNo2" />
+                <ScalarProperty Name="DOBCityID" ColumnName="DOBCityID" />
+                <ScalarProperty Name="DOBStateID" ColumnName="DOBStateID" />
+                <ScalarProperty Name="DOBCountryID" ColumnName="DOBCountryID" />
+                <ScalarProperty Name="FatherName" ColumnName="FatherName" />
+                <ScalarProperty Name="PhoneNoExt" ColumnName="PhoneNoExt" />
+                <ScalarProperty Name="NameAsAadhar" ColumnName="NameAsAadhar" />
+                <ScalarProperty Name="V4RID" ColumnName="V4RID" />
+                <ScalarProperty Name="MigratedDataFrom" ColumnName="MigratedDataFrom" />
+                <ScalarProperty Name="V3V4RID" ColumnName="V3V4RID" />
+                <ScalarProperty Name="isMigrated" ColumnName="isMigrated" />
+                <ScalarProperty Name="CurrencyID" ColumnName="CurrencyID" />
+                <ScalarProperty Name="DateFormat" ColumnName="DateFormat" />
+                <ScalarProperty Name="DurationID" ColumnName="DurationID" />
+                <ScalarProperty Name="IsPortalId" ColumnName="IsPortalId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HC_USER">
+            <EntityTypeMapping TypeName="Hirecraftv5Model.HC_USER">
+              <MappingFragment StoreEntitySet="HC_USER">
+                <ScalarProperty Name="RID" ColumnName="RID" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="TID" ColumnName="TID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="CandidateNumberGeneration" FunctionName="Hirecraftv5Model.Store.CandidateNumberGeneration" />
+          <FunctionImportMapping FunctionImportName="usp_GetResumeDetailsForDuplicateCheck" FunctionName="Hirecraftv5Model.Store.usp_GetResumeDetailsForDuplicateCheck" />
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

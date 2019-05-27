@@ -1,0 +1,981 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="V5Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="HC_CONFIG_TEMPLATE">
+          <Key>
+            <PropertyRef Name="RID" />
+          </Key>
+          <Property Name="RID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="PswTemplateID" Type="bigint" />
+          <Property Name="AccessRightTemID" Type="bigint" />
+          <Property Name="OrgTemplateID" Type="bigint" />
+          <Property Name="DesignTemplateID" Type="bigint" />
+          <Property Name="TID" Type="bigint" Nullable="false" />
+          <Property Name="ResSearchLayoutID" Type="bigint" />
+        </EntityType>
+        <EntityType Name="HC_USER_MAIN">
+          <Key>
+            <PropertyRef Name="RID" />
+          </Key>
+          <Property Name="RID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FirstName" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="50" />
+          <Property Name="MiddleName" Type="nvarchar" MaxLength="50" />
+          <Property Name="EmailID" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="MobileNo" Type="nvarchar" MaxLength="30" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Password" Type="nvarchar" MaxLength="150" Nullable="false" />
+          <Property Name="ReportingToID" Type="bigint" />
+          <Property Name="Status" Type="bit" Nullable="false" />
+          <Property Name="Notes" Type="nvarchar" MaxLength="1000" />
+          <Property Name="CreatedUserID" Type="bigint" Nullable="false" />
+          <Property Name="ModifiedUserID" Type="bigint" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="ModifiedDate" Type="datetime" />
+          <Property Name="TID" Type="bigint" Nullable="false" />
+          <Property Name="LstLgnFailedAttempt" Type="datetime" />
+          <Property Name="LastLoginFailedAttemptCnt" Type="smallint" />
+          <Property Name="LastPasswordExpiryDate" Type="datetime" />
+          <Property Name="IsFirstTimeLogin" Type="smallint" />
+          <Property Name="Salutation" Type="bigint" />
+          <Property Name="PhoneNo" Type="nvarchar" MaxLength="100" />
+          <Property Name="DOB" Type="datetime" />
+          <Property Name="ConfigTemplateID" Type="bigint" Nullable="false" />
+          <Property Name="Photo" Type="nvarchar(max)" />
+          <Property Name="GradeID" Type="bigint" />
+          <Property Name="ForgotPswKey" Type="nvarchar(max)" />
+          <Property Name="IsAdmin" Type="bit" Nullable="false" />
+          <Property Name="DesignationID" Type="bigint" Nullable="false" />
+          <Property Name="GenderID" Type="bigint" />
+          <Property Name="Keys" Type="nvarchar" MaxLength="50" />
+          <Property Name="Pin" Type="bigint" />
+          <Property Name="KeyExpiryTime" Type="datetime" />
+          <Property Name="IsPrimary" Type="bit" Nullable="false" />
+          <Property Name="EmailSignature" Type="nvarchar(max)" />
+          <Property Name="NationalityID" Type="bigint" />
+          <Property Name="IsDataSync" Type="bit" Nullable="false" />
+          <Property Name="LastDataSyncDate" Type="datetime" />
+          <Property Name="TimeZone" Type="bigint" />
+          <Property Name="ContactRoleID" Type="bigint" />
+          <Property Name="LastLoginDate" Type="datetime" />
+          <Property Name="EmployerID" Type="nvarchar(max)" />
+          <Property Name="CalendarDefaultViewId" Type="smallint" />
+          <Property Name="BloodGroupId" Type="bigint" />
+          <Property Name="MobileNoExt" Type="nvarchar(max)" />
+          <Property Name="WorkLocationID" Type="bigint" />
+          <Property Name="MaritalStatus" Type="smallint" />
+          <Property Name="ReportingManagerName" Type="nvarchar(max)" />
+          <Property Name="DigiSignData" Type="nvarchar(max)" />
+          <Property Name="DigiSignPassword" Type="nvarchar(max)" />
+          <Property Name="ActualEmailID" Type="nvarchar(max)" />
+          <Property Name="DigiSignName" Type="nvarchar(max)" />
+          <Property Name="MobileNo2" Type="nvarchar" MaxLength="100" />
+          <Property Name="DOBCityID" Type="bigint" />
+          <Property Name="DOBStateID" Type="bigint" />
+          <Property Name="DOBCountryID" Type="bigint" />
+          <Property Name="FatherName" Type="nvarchar(max)" />
+          <Property Name="PhoneNoExt" Type="nvarchar(max)" />
+          <Property Name="NameAsAadhar" Type="nvarchar(max)" />
+          <Property Name="V4RID" Type="bigint" Nullable="false" />
+          <Property Name="MigratedDataFrom" Type="varchar" MaxLength="100" />
+          <Property Name="V3V4RID" Type="bigint" />
+          <Property Name="isMigrated" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="CurrencyID" Type="bigint" />
+          <Property Name="DateFormat" Type="nvarchar(max)" />
+          <Property Name="DurationID" Type="bigint" />
+          <Property Name="SyncDataManually" Type="smallint" />
+          <Property Name="IsPortalId" Type="bigint" />
+        </EntityType>
+        <EntityType Name="HCM_COMMON_MASTER">
+          <Key>
+            <PropertyRef Name="RID" />
+          </Key>
+          <Property Name="RID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="RefID" Type="nvarchar" MaxLength="30" />
+          <Property Name="LanguageType" Type="smallint" Nullable="false" />
+          <Property Name="EngKeyID" Type="bigint" Nullable="false" />
+          <Property Name="CreatedBy" Type="bigint" Nullable="false" />
+          <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedBy" Type="bigint" />
+          <Property Name="ModifiedOn" Type="datetime" />
+          <Property Name="Status" Type="bit" Nullable="false" />
+          <Property Name="EffectiveDate" Type="datetime" />
+          <Property Name="TID" Type="bigint" Nullable="false" />
+          <Property Name="RefType" Type="bigint" Nullable="false" />
+          <Property Name="ConstValue" Type="smallint" Nullable="false" />
+          <Property Name="NoOfEntries" Type="smallint" />
+          <Property Name="SequenceNo" Type="bigint" />
+          <Property Name="ControlNo" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="HCM_COUNTRY">
+          <Key>
+            <PropertyRef Name="RID" />
+          </Key>
+          <Property Name="RID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="CountryCode" Type="nvarchar" MaxLength="10" />
+          <Property Name="ISDCode" Type="nvarchar" MaxLength="10" />
+          <Property Name="LanguageType" Type="smallint" Nullable="false" />
+          <Property Name="EngKeyID" Type="bigint" Nullable="false" />
+          <Property Name="CreatedUserID" Type="bigint" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedUserID" Type="bigint" />
+          <Property Name="ModifiedDate" Type="datetime" />
+          <Property Name="RefID" Type="nvarchar" MaxLength="30" />
+          <Property Name="Status" Type="bit" Nullable="false" />
+          <Property Name="EffectiveDate" Type="datetime" />
+          <Property Name="TID" Type="bigint" Nullable="false" />
+          <Property Name="RegionID" Type="bigint" />
+          <Property Name="PincodeType" Type="smallint" />
+          <Property Name="V4RID" Type="bigint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="HCM_CURRENCY">
+          <Key>
+            <PropertyRef Name="RID" />
+          </Key>
+          <Property Name="RID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TID" Type="bigint" Nullable="false" />
+          <Property Name="Currency" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="RefID" Type="nvarchar" MaxLength="30" />
+          <Property Name="Factor" Type="decimal" Precision="18" Scale="4" Nullable="false" />
+          <Property Name="HelpText" Type="nvarchar" MaxLength="150" />
+          <Property Name="CurrencyCode" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="ActiveDate" Type="datetime" Nullable="false" />
+          <Property Name="LanguageType" Type="smallint" Nullable="false" />
+          <Property Name="EngKeyID" Type="bigint" Nullable="false" />
+          <Property Name="CreatedUserID" Type="bigint" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedUserID" Type="bigint" />
+          <Property Name="ModifiedDate" Type="datetime" />
+          <Property Name="Status" Type="bit" Nullable="false" />
+          <Property Name="EffectiveDate" Type="datetime" />
+          <Property Name="CurrencyCulture" Type="nvarchar(max)" />
+          <Property Name="V4RID" Type="bigint" />
+        </EntityType>
+        <EntityType Name="HCM_DESIGNATIONS">
+          <Key>
+            <PropertyRef Name="RID" />
+          </Key>
+          <Property Name="RID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="150" Nullable="false" />
+          <Property Name="Title2" Type="nvarchar" MaxLength="150" Nullable="false" />
+          <Property Name="TitleAlias" Type="nvarchar" MaxLength="250" />
+          <Property Name="Includelist" Type="nvarchar" MaxLength="500" />
+          <Property Name="Excludelist" Type="nvarchar" MaxLength="500" />
+          <Property Name="MinCTC" Type="decimal" Precision="9" Scale="2" Nullable="false" />
+          <Property Name="MaxCTC" Type="decimal" Precision="9" Scale="2" Nullable="false" />
+          <Property Name="AvgCTC" Type="decimal" Precision="9" Scale="2" Nullable="false" />
+          <Property Name="Status" Type="bit" Nullable="false" />
+          <Property Name="LanguageType" Type="smallint" Nullable="false" />
+          <Property Name="EngKeyID" Type="bigint" Nullable="false" />
+          <Property Name="CreatedUserID" Type="bigint" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedUserID" Type="bigint" />
+          <Property Name="ModifiedDate" Type="datetime" />
+          <Property Name="EffectiveDate" Type="datetime" />
+          <Property Name="TID" Type="bigint" Nullable="false" />
+          <Property Name="RefID" Type="nvarchar" MaxLength="30" />
+          <Property Name="isintegrated" Type="smallint" Nullable="false" />
+          <Property Name="IsReqDesignation" Type="bit" />
+          <Property Name="JobCodeCharacter" Type="nvarchar(max)" />
+          <Property Name="Factor" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="V4RID" Type="bigint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="HCM_EDUCATION">
+          <Key>
+            <PropertyRef Name="RID" />
+          </Key>
+          <Property Name="RID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="150" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="250" />
+          <Property Name="IncludeAlias" Type="nvarchar" MaxLength="500" />
+          <Property Name="ExcludeAlias" Type="nvarchar" MaxLength="500" />
+          <Property Name="YearsOfEdu" Type="smallint" Nullable="false" />
+          <Property Name="Status" Type="bit" Nullable="false" />
+          <Property Name="LanguageType" Type="smallint" Nullable="false" />
+          <Property Name="EngKeyID" Type="bigint" Nullable="false" />
+          <Property Name="CreatedUserID" Type="bigint" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedUserID" Type="bigint" />
+          <Property Name="ModifiedDate" Type="datetime" />
+          <Property Name="RefID" Type="nvarchar" MaxLength="30" />
+          <Property Name="EffectiveDate" Type="datetime" />
+          <Property Name="TID" Type="bigint" Nullable="false" />
+          <Property Name="EduGroupID" Type="bigint" />
+          <Property Name="V4RID" Type="bigint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="HCM_GENDER">
+          <Key>
+            <PropertyRef Name="RID" />
+          </Key>
+          <Property Name="RID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="RefID" Type="nvarchar" MaxLength="30" />
+          <Property Name="LanguageType" Type="smallint" Nullable="false" />
+          <Property Name="EngKeyID" Type="bigint" Nullable="false" />
+          <Property Name="CreatedUserID" Type="bigint" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedUserID" Type="bigint" />
+          <Property Name="ModifiedDate" Type="datetime" />
+          <Property Name="Status" Type="bit" Nullable="false" />
+          <Property Name="EffectiveDate" Type="datetime" />
+          <Property Name="TID" Type="bigint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="HCM_LOCATIONS">
+          <Key>
+            <PropertyRef Name="RID" />
+          </Key>
+          <Property Name="RID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="PinCode" Type="nvarchar(max)" />
+          <Property Name="IncludeAlias" Type="nvarchar" MaxLength="500" />
+          <Property Name="ExcludeAlias" Type="nvarchar" MaxLength="500" />
+          <Property Name="StateID" Type="bigint" Nullable="false" />
+          <Property Name="GroupID" Type="bigint" Nullable="false" />
+          <Property Name="ZoneID" Type="bigint" Nullable="false" />
+          <Property Name="CategoryID" Type="bigint" Nullable="false" />
+          <Property Name="IsMetro" Type="bit" Nullable="false" />
+          <Property Name="LocationType" Type="smallint" Nullable="false" />
+          <Property Name="RefID" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="STDCode" Type="nvarchar" MaxLength="20" />
+          <Property Name="Status" Type="bit" Nullable="false" />
+          <Property Name="BaseLocationID" Type="bigint" />
+          <Property Name="LanguageType" Type="smallint" Nullable="false" />
+          <Property Name="EngKeyID" Type="bigint" Nullable="false" />
+          <Property Name="CreatedUserID" Type="bigint" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedUserID" Type="bigint" />
+          <Property Name="ModifiedDate" Type="datetime" />
+          <Property Name="EffectiveDate" Type="datetime" />
+          <Property Name="IsCompany" Type="bit" Nullable="false" />
+          <Property Name="TID" Type="bigint" Nullable="false" />
+          <Property Name="IsDataSync" Type="bit" Nullable="false" />
+          <Property Name="LastDataSyncDate" Type="datetime" />
+          <Property Name="LocationCategoryID" Type="bigint" />
+          <Property Name="V4RID" Type="bigint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="HCM_SKILLS">
+          <Key>
+            <PropertyRef Name="RID" />
+          </Key>
+          <Property Name="RID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="RefID" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="150" />
+          <Property Name="IncludeAlias" Type="nvarchar" MaxLength="500" />
+          <Property Name="ExcludeAlias" Type="nvarchar" MaxLength="500" />
+          <Property Name="Type" Type="smallint" Nullable="false" />
+          <Property Name="LanguageType" Type="smallint" Nullable="false" />
+          <Property Name="EngKeyID" Type="bigint" Nullable="false" />
+          <Property Name="CreatedUserID" Type="bigint" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedUserID" Type="bigint" />
+          <Property Name="ModifiedDate" Type="datetime" />
+          <Property Name="Status" Type="bit" Nullable="false" />
+          <Property Name="EffectiveDate" Type="datetime" />
+          <Property Name="TID" Type="bigint" Nullable="false" />
+          <Property Name="SkillGroupID" Type="bigint" />
+          <Property Name="V4RID" Type="bigint" Nullable="false" />
+          <Property Name="V3V4RID" Type="bigint" />
+          <Property Name="isMigrated" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="MigratedDataFrom" Type="varchar(max)" />
+        </EntityType>
+        <EntityType Name="HCM_UNIVERSITY_GROUP">
+          <Key>
+            <PropertyRef Name="RID" />
+          </Key>
+          <Property Name="RID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="RefID" Type="nvarchar" MaxLength="30" />
+          <Property Name="Code" Type="nvarchar" MaxLength="15" />
+          <Property Name="LanguageType" Type="smallint" Nullable="false" />
+          <Property Name="EngKeyID" Type="bigint" Nullable="false" />
+          <Property Name="Status" Type="bit" Nullable="false" />
+          <Property Name="CreatedUserID" Type="bigint" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedUserID" Type="bigint" />
+          <Property Name="ModifiedDate" Type="datetime" />
+          <Property Name="EffectiveDate" Type="datetime" />
+          <Property Name="TID" Type="bigint" Nullable="false" />
+          <Property Name="IsBlackListed" Type="bit" Nullable="false" />
+          <Property Name="V4RID" Type="bigint" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="V5ModelStoreContainer">
+          <EntitySet Name="HC_CONFIG_TEMPLATE" EntityType="Self.HC_CONFIG_TEMPLATE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HC_USER_MAIN" EntityType="Self.HC_USER_MAIN" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HCM_COMMON_MASTER" EntityType="Self.HCM_COMMON_MASTER" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HCM_COUNTRY" EntityType="Self.HCM_COUNTRY" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HCM_CURRENCY" EntityType="Self.HCM_CURRENCY" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HCM_DESIGNATIONS" EntityType="Self.HCM_DESIGNATIONS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HCM_EDUCATION" EntityType="Self.HCM_EDUCATION" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HCM_GENDER" EntityType="Self.HCM_GENDER" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HCM_LOCATIONS" EntityType="Self.HCM_LOCATIONS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HCM_SKILLS" EntityType="Self.HCM_SKILLS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HCM_UNIVERSITY_GROUP" EntityType="Self.HCM_UNIVERSITY_GROUP" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="V5Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="HC_CONFIG_TEMPLATE">
+          <Key>
+            <PropertyRef Name="RID" />
+          </Key>
+          <Property Name="RID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PswTemplateID" Type="Int64" />
+          <Property Name="AccessRightTemID" Type="Int64" />
+          <Property Name="OrgTemplateID" Type="Int64" />
+          <Property Name="DesignTemplateID" Type="Int64" />
+          <Property Name="TID" Type="Int64" Nullable="false" />
+          <Property Name="ResSearchLayoutID" Type="Int64" />
+        </EntityType>
+        <EntityType Name="HC_USER_MAIN">
+          <Key>
+            <PropertyRef Name="RID" />
+          </Key>
+          <Property Name="RID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FirstName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MiddleName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="EmailID" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="MobileNo" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Password" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ReportingToID" Type="Int64" />
+          <Property Name="Status" Type="Boolean" Nullable="false" />
+          <Property Name="Notes" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedUserID" Type="Int64" Nullable="false" />
+          <Property Name="ModifiedUserID" Type="Int64" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+          <Property Name="TID" Type="Int64" Nullable="false" />
+          <Property Name="LstLgnFailedAttempt" Type="DateTime" Precision="3" />
+          <Property Name="LastLoginFailedAttemptCnt" Type="Int16" />
+          <Property Name="LastPasswordExpiryDate" Type="DateTime" Precision="3" />
+          <Property Name="IsFirstTimeLogin" Type="Int16" />
+          <Property Name="Salutation" Type="Int64" />
+          <Property Name="PhoneNo" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="DOB" Type="DateTime" Precision="3" />
+          <Property Name="ConfigTemplateID" Type="Int64" Nullable="false" />
+          <Property Name="Photo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="GradeID" Type="Int64" />
+          <Property Name="ForgotPswKey" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IsAdmin" Type="Boolean" Nullable="false" />
+          <Property Name="DesignationID" Type="Int64" Nullable="false" />
+          <Property Name="GenderID" Type="Int64" />
+          <Property Name="Keys" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Pin" Type="Int64" />
+          <Property Name="KeyExpiryTime" Type="DateTime" Precision="3" />
+          <Property Name="IsPrimary" Type="Boolean" Nullable="false" />
+          <Property Name="EmailSignature" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="NationalityID" Type="Int64" />
+          <Property Name="IsDataSync" Type="Boolean" Nullable="false" />
+          <Property Name="LastDataSyncDate" Type="DateTime" Precision="3" />
+          <Property Name="TimeZone" Type="Int64" />
+          <Property Name="ContactRoleID" Type="Int64" />
+          <Property Name="LastLoginDate" Type="DateTime" Precision="3" />
+          <Property Name="EmployerID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CalendarDefaultViewId" Type="Int16" />
+          <Property Name="BloodGroupId" Type="Int64" />
+          <Property Name="MobileNoExt" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="WorkLocationID" Type="Int64" />
+          <Property Name="MaritalStatus" Type="Int16" />
+          <Property Name="ReportingManagerName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DigiSignData" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DigiSignPassword" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ActualEmailID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DigiSignName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MobileNo2" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="DOBCityID" Type="Int64" />
+          <Property Name="DOBStateID" Type="Int64" />
+          <Property Name="DOBCountryID" Type="Int64" />
+          <Property Name="FatherName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PhoneNoExt" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="NameAsAadhar" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="V4RID" Type="Int64" Nullable="false" />
+          <Property Name="MigratedDataFrom" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="V3V4RID" Type="Int64" />
+          <Property Name="isMigrated" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="CurrencyID" Type="Int64" />
+          <Property Name="DateFormat" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DurationID" Type="Int64" />
+          <Property Name="SyncDataManually" Type="Int16" />
+          <Property Name="IsPortalId" Type="Int64" />
+        </EntityType>
+        <EntityType Name="HCM_COUNTRY">
+          <Key>
+            <PropertyRef Name="RID" />
+          </Key>
+          <Property Name="RID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CountryCode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="ISDCode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="LanguageType" Type="Int16" Nullable="false" />
+          <Property Name="EngKeyID" Type="Int64" Nullable="false" />
+          <Property Name="CreatedUserID" Type="Int64" Nullable="false" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifiedUserID" Type="Int64" />
+          <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+          <Property Name="RefID" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="Boolean" Nullable="false" />
+          <Property Name="EffectiveDate" Type="DateTime" Precision="3" />
+          <Property Name="TID" Type="Int64" Nullable="false" />
+          <Property Name="RegionID" Type="Int64" />
+          <Property Name="PincodeType" Type="Int16" />
+          <Property Name="V4RID" Type="Int64" Nullable="false" />
+        </EntityType>
+        <EntityType Name="HCM_CURRENCY">
+          <Key>
+            <PropertyRef Name="RID" />
+          </Key>
+          <Property Name="RID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TID" Type="Int64" Nullable="false" />
+          <Property Name="Currency" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="RefID" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Factor" Type="Decimal" Precision="18" Scale="4" Nullable="false" />
+          <Property Name="HelpText" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="CurrencyCode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ActiveDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="LanguageType" Type="Int16" Nullable="false" />
+          <Property Name="EngKeyID" Type="Int64" Nullable="false" />
+          <Property Name="CreatedUserID" Type="Int64" Nullable="false" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifiedUserID" Type="Int64" />
+          <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+          <Property Name="Status" Type="Boolean" Nullable="false" />
+          <Property Name="EffectiveDate" Type="DateTime" Precision="3" />
+          <Property Name="CurrencyCulture" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="V4RID" Type="Int64" />
+        </EntityType>
+        <EntityType Name="HCM_DESIGNATIONS">
+          <Key>
+            <PropertyRef Name="RID" />
+          </Key>
+          <Property Name="RID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Title2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TitleAlias" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Includelist" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Excludelist" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="MinCTC" Type="Decimal" Precision="9" Scale="2" Nullable="false" />
+          <Property Name="MaxCTC" Type="Decimal" Precision="9" Scale="2" Nullable="false" />
+          <Property Name="AvgCTC" Type="Decimal" Precision="9" Scale="2" Nullable="false" />
+          <Property Name="Status" Type="Boolean" Nullable="false" />
+          <Property Name="LanguageType" Type="Int16" Nullable="false" />
+          <Property Name="EngKeyID" Type="Int64" Nullable="false" />
+          <Property Name="CreatedUserID" Type="Int64" Nullable="false" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifiedUserID" Type="Int64" />
+          <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+          <Property Name="EffectiveDate" Type="DateTime" Precision="3" />
+          <Property Name="TID" Type="Int64" Nullable="false" />
+          <Property Name="RefID" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="isintegrated" Type="Int16" Nullable="false" />
+          <Property Name="IsReqDesignation" Type="Boolean" />
+          <Property Name="JobCodeCharacter" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Factor" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="V4RID" Type="Int64" Nullable="false" />
+        </EntityType>
+        <EntityType Name="HCM_EDUCATION">
+          <Key>
+            <PropertyRef Name="RID" />
+          </Key>
+          <Property Name="RID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="IncludeAlias" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="ExcludeAlias" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="YearsOfEdu" Type="Int16" Nullable="false" />
+          <Property Name="Status" Type="Boolean" Nullable="false" />
+          <Property Name="LanguageType" Type="Int16" Nullable="false" />
+          <Property Name="EngKeyID" Type="Int64" Nullable="false" />
+          <Property Name="CreatedUserID" Type="Int64" Nullable="false" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifiedUserID" Type="Int64" />
+          <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+          <Property Name="RefID" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="EffectiveDate" Type="DateTime" Precision="3" />
+          <Property Name="TID" Type="Int64" Nullable="false" />
+          <Property Name="EduGroupID" Type="Int64" />
+          <Property Name="V4RID" Type="Int64" Nullable="false" />
+        </EntityType>
+        <EntityType Name="HCM_LOCATIONS">
+          <Key>
+            <PropertyRef Name="RID" />
+          </Key>
+          <Property Name="RID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PinCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IncludeAlias" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="ExcludeAlias" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="StateID" Type="Int64" Nullable="false" />
+          <Property Name="GroupID" Type="Int64" Nullable="false" />
+          <Property Name="ZoneID" Type="Int64" Nullable="false" />
+          <Property Name="CategoryID" Type="Int64" Nullable="false" />
+          <Property Name="IsMetro" Type="Boolean" Nullable="false" />
+          <Property Name="LocationType" Type="Int16" Nullable="false" />
+          <Property Name="RefID" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="STDCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="Boolean" Nullable="false" />
+          <Property Name="BaseLocationID" Type="Int64" />
+          <Property Name="LanguageType" Type="Int16" Nullable="false" />
+          <Property Name="EngKeyID" Type="Int64" Nullable="false" />
+          <Property Name="CreatedUserID" Type="Int64" Nullable="false" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifiedUserID" Type="Int64" />
+          <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+          <Property Name="EffectiveDate" Type="DateTime" Precision="3" />
+          <Property Name="IsCompany" Type="Boolean" Nullable="false" />
+          <Property Name="TID" Type="Int64" Nullable="false" />
+          <Property Name="IsDataSync" Type="Boolean" Nullable="false" />
+          <Property Name="LastDataSyncDate" Type="DateTime" Precision="3" />
+          <Property Name="LocationCategoryID" Type="Int64" />
+          <Property Name="V4RID" Type="Int64" Nullable="false" />
+        </EntityType>
+        <EntityType Name="HCM_SKILLS">
+          <Key>
+            <PropertyRef Name="RID" />
+          </Key>
+          <Property Name="RID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="RefID" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="IncludeAlias" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="ExcludeAlias" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Type" Type="Int16" Nullable="false" />
+          <Property Name="LanguageType" Type="Int16" Nullable="false" />
+          <Property Name="EngKeyID" Type="Int64" Nullable="false" />
+          <Property Name="CreatedUserID" Type="Int64" Nullable="false" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifiedUserID" Type="Int64" />
+          <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+          <Property Name="Status" Type="Boolean" Nullable="false" />
+          <Property Name="EffectiveDate" Type="DateTime" Precision="3" />
+          <Property Name="TID" Type="Int64" Nullable="false" />
+          <Property Name="SkillGroupID" Type="Int64" />
+          <Property Name="V4RID" Type="Int64" Nullable="false" />
+          <Property Name="V3V4RID" Type="Int64" />
+          <Property Name="isMigrated" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="MigratedDataFrom" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="V5Entities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="HC_CONFIG_TEMPLATE" EntityType="Self.HC_CONFIG_TEMPLATE" />
+          <EntitySet Name="HC_USER_MAIN" EntityType="Self.HC_USER_MAIN" />
+          <EntitySet Name="HCM_COUNTRY" EntityType="Self.HCM_COUNTRY" />
+          <EntitySet Name="HCM_CURRENCY" EntityType="Self.HCM_CURRENCY" />
+          <EntitySet Name="HCM_DESIGNATIONS" EntityType="Self.HCM_DESIGNATIONS" />
+          <EntitySet Name="HCM_EDUCATION" EntityType="Self.HCM_EDUCATION" />
+          <EntitySet Name="HCM_LOCATIONS" EntityType="Self.HCM_LOCATIONS" />
+          <EntitySet Name="HCM_SKILLS" EntityType="Self.HCM_SKILLS" />
+          <EntitySet Name="HCM_GENDER" EntityType="V5Model.HCM_GENDER" />
+          <EntitySet Name="HCM_UNIVERSITY_GROUP" EntityType="V5Model.HCM_UNIVERSITY_GROUP" />
+          <EntitySet Name="HCM_COMMON_MASTER" EntityType="V5Model.HCM_COMMON_MASTER" />
+        </EntityContainer>
+        <EntityType Name="HCM_GENDER">
+          <Key>
+            <PropertyRef Name="RID" />
+          </Key>
+          <Property Name="RID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="RefID" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="LanguageType" Type="Int16" Nullable="false" />
+          <Property Name="EngKeyID" Type="Int64" Nullable="false" />
+          <Property Name="CreatedUserID" Type="Int64" Nullable="false" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifiedUserID" Type="Int64" />
+          <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+          <Property Name="Status" Type="Boolean" Nullable="false" />
+          <Property Name="EffectiveDate" Type="DateTime" Precision="3" />
+          <Property Name="TID" Type="Int64" Nullable="false" />
+        </EntityType>
+        <EntityType Name="HCM_UNIVERSITY_GROUP">
+          <Key>
+            <PropertyRef Name="RID" />
+          </Key>
+          <Property Name="RID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="RefID" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Code" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="LanguageType" Type="Int16" Nullable="false" />
+          <Property Name="EngKeyID" Type="Int64" Nullable="false" />
+          <Property Name="Status" Type="Boolean" Nullable="false" />
+          <Property Name="CreatedUserID" Type="Int64" Nullable="false" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifiedUserID" Type="Int64" />
+          <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+          <Property Name="EffectiveDate" Type="DateTime" Precision="3" />
+          <Property Name="TID" Type="Int64" Nullable="false" />
+          <Property Name="IsBlackListed" Type="Boolean" Nullable="false" />
+          <Property Name="V4RID" Type="Int64" Nullable="false" />
+        </EntityType>
+        <EntityType Name="HCM_COMMON_MASTER">
+          <Key>
+            <PropertyRef Name="RID" />
+          </Key>
+          <Property Name="RID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="RefID" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="LanguageType" Type="Int16" Nullable="false" />
+          <Property Name="EngKeyID" Type="Int64" Nullable="false" />
+          <Property Name="CreatedBy" Type="Int64" Nullable="false" />
+          <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifiedBy" Type="Int64" />
+          <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+          <Property Name="Status" Type="Boolean" Nullable="false" />
+          <Property Name="EffectiveDate" Type="DateTime" Precision="3" />
+          <Property Name="TID" Type="Int64" Nullable="false" />
+          <Property Name="RefType" Type="Int64" Nullable="false" />
+          <Property Name="ConstValue" Type="Int16" Nullable="false" />
+          <Property Name="NoOfEntries" Type="Int16" />
+          <Property Name="SequenceNo" Type="Int64" />
+          <Property Name="ControlNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="V5ModelStoreContainer" CdmEntityContainer="V5Entities1">
+          <EntitySetMapping Name="HC_CONFIG_TEMPLATE">
+            <EntityTypeMapping TypeName="V5Model.HC_CONFIG_TEMPLATE">
+              <MappingFragment StoreEntitySet="HC_CONFIG_TEMPLATE">
+                <ScalarProperty Name="RID" ColumnName="RID" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="PswTemplateID" ColumnName="PswTemplateID" />
+                <ScalarProperty Name="AccessRightTemID" ColumnName="AccessRightTemID" />
+                <ScalarProperty Name="OrgTemplateID" ColumnName="OrgTemplateID" />
+                <ScalarProperty Name="DesignTemplateID" ColumnName="DesignTemplateID" />
+                <ScalarProperty Name="TID" ColumnName="TID" />
+                <ScalarProperty Name="ResSearchLayoutID" ColumnName="ResSearchLayoutID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HC_USER_MAIN">
+            <EntityTypeMapping TypeName="V5Model.HC_USER_MAIN">
+              <MappingFragment StoreEntitySet="HC_USER_MAIN">
+                <ScalarProperty Name="RID" ColumnName="RID" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="MiddleName" ColumnName="MiddleName" />
+                <ScalarProperty Name="EmailID" ColumnName="EmailID" />
+                <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="ReportingToID" ColumnName="ReportingToID" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+                <ScalarProperty Name="CreatedUserID" ColumnName="CreatedUserID" />
+                <ScalarProperty Name="ModifiedUserID" ColumnName="ModifiedUserID" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="TID" ColumnName="TID" />
+                <ScalarProperty Name="LstLgnFailedAttempt" ColumnName="LstLgnFailedAttempt" />
+                <ScalarProperty Name="LastLoginFailedAttemptCnt" ColumnName="LastLoginFailedAttemptCnt" />
+                <ScalarProperty Name="LastPasswordExpiryDate" ColumnName="LastPasswordExpiryDate" />
+                <ScalarProperty Name="IsFirstTimeLogin" ColumnName="IsFirstTimeLogin" />
+                <ScalarProperty Name="Salutation" ColumnName="Salutation" />
+                <ScalarProperty Name="PhoneNo" ColumnName="PhoneNo" />
+                <ScalarProperty Name="DOB" ColumnName="DOB" />
+                <ScalarProperty Name="ConfigTemplateID" ColumnName="ConfigTemplateID" />
+                <ScalarProperty Name="Photo" ColumnName="Photo" />
+                <ScalarProperty Name="GradeID" ColumnName="GradeID" />
+                <ScalarProperty Name="ForgotPswKey" ColumnName="ForgotPswKey" />
+                <ScalarProperty Name="IsAdmin" ColumnName="IsAdmin" />
+                <ScalarProperty Name="DesignationID" ColumnName="DesignationID" />
+                <ScalarProperty Name="GenderID" ColumnName="GenderID" />
+                <ScalarProperty Name="Keys" ColumnName="Keys" />
+                <ScalarProperty Name="Pin" ColumnName="Pin" />
+                <ScalarProperty Name="KeyExpiryTime" ColumnName="KeyExpiryTime" />
+                <ScalarProperty Name="IsPrimary" ColumnName="IsPrimary" />
+                <ScalarProperty Name="EmailSignature" ColumnName="EmailSignature" />
+                <ScalarProperty Name="NationalityID" ColumnName="NationalityID" />
+                <ScalarProperty Name="IsDataSync" ColumnName="IsDataSync" />
+                <ScalarProperty Name="LastDataSyncDate" ColumnName="LastDataSyncDate" />
+                <ScalarProperty Name="TimeZone" ColumnName="TimeZone" />
+                <ScalarProperty Name="ContactRoleID" ColumnName="ContactRoleID" />
+                <ScalarProperty Name="LastLoginDate" ColumnName="LastLoginDate" />
+                <ScalarProperty Name="EmployerID" ColumnName="EmployerID" />
+                <ScalarProperty Name="CalendarDefaultViewId" ColumnName="CalendarDefaultViewId" />
+                <ScalarProperty Name="BloodGroupId" ColumnName="BloodGroupId" />
+                <ScalarProperty Name="MobileNoExt" ColumnName="MobileNoExt" />
+                <ScalarProperty Name="WorkLocationID" ColumnName="WorkLocationID" />
+                <ScalarProperty Name="MaritalStatus" ColumnName="MaritalStatus" />
+                <ScalarProperty Name="ReportingManagerName" ColumnName="ReportingManagerName" />
+                <ScalarProperty Name="DigiSignData" ColumnName="DigiSignData" />
+                <ScalarProperty Name="DigiSignPassword" ColumnName="DigiSignPassword" />
+                <ScalarProperty Name="ActualEmailID" ColumnName="ActualEmailID" />
+                <ScalarProperty Name="DigiSignName" ColumnName="DigiSignName" />
+                <ScalarProperty Name="MobileNo2" ColumnName="MobileNo2" />
+                <ScalarProperty Name="DOBCityID" ColumnName="DOBCityID" />
+                <ScalarProperty Name="DOBStateID" ColumnName="DOBStateID" />
+                <ScalarProperty Name="DOBCountryID" ColumnName="DOBCountryID" />
+                <ScalarProperty Name="FatherName" ColumnName="FatherName" />
+                <ScalarProperty Name="PhoneNoExt" ColumnName="PhoneNoExt" />
+                <ScalarProperty Name="NameAsAadhar" ColumnName="NameAsAadhar" />
+                <ScalarProperty Name="V4RID" ColumnName="V4RID" />
+                <ScalarProperty Name="MigratedDataFrom" ColumnName="MigratedDataFrom" />
+                <ScalarProperty Name="V3V4RID" ColumnName="V3V4RID" />
+                <ScalarProperty Name="isMigrated" ColumnName="isMigrated" />
+                <ScalarProperty Name="CurrencyID" ColumnName="CurrencyID" />
+                <ScalarProperty Name="DateFormat" ColumnName="DateFormat" />
+                <ScalarProperty Name="DurationID" ColumnName="DurationID" />
+                <ScalarProperty Name="SyncDataManually" ColumnName="SyncDataManually" />
+                <ScalarProperty Name="IsPortalId" ColumnName="IsPortalId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HCM_COUNTRY">
+            <EntityTypeMapping TypeName="V5Model.HCM_COUNTRY">
+              <MappingFragment StoreEntitySet="HCM_COUNTRY">
+                <ScalarProperty Name="RID" ColumnName="RID" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="CountryCode" ColumnName="CountryCode" />
+                <ScalarProperty Name="ISDCode" ColumnName="ISDCode" />
+                <ScalarProperty Name="LanguageType" ColumnName="LanguageType" />
+                <ScalarProperty Name="EngKeyID" ColumnName="EngKeyID" />
+                <ScalarProperty Name="CreatedUserID" ColumnName="CreatedUserID" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ModifiedUserID" ColumnName="ModifiedUserID" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="RefID" ColumnName="RefID" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="EffectiveDate" ColumnName="EffectiveDate" />
+                <ScalarProperty Name="TID" ColumnName="TID" />
+                <ScalarProperty Name="RegionID" ColumnName="RegionID" />
+                <ScalarProperty Name="PincodeType" ColumnName="PincodeType" />
+                <ScalarProperty Name="V4RID" ColumnName="V4RID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HCM_CURRENCY">
+            <EntityTypeMapping TypeName="V5Model.HCM_CURRENCY">
+              <MappingFragment StoreEntitySet="HCM_CURRENCY">
+                <ScalarProperty Name="RID" ColumnName="RID" />
+                <ScalarProperty Name="TID" ColumnName="TID" />
+                <ScalarProperty Name="Currency" ColumnName="Currency" />
+                <ScalarProperty Name="RefID" ColumnName="RefID" />
+                <ScalarProperty Name="Factor" ColumnName="Factor" />
+                <ScalarProperty Name="HelpText" ColumnName="HelpText" />
+                <ScalarProperty Name="CurrencyCode" ColumnName="CurrencyCode" />
+                <ScalarProperty Name="ActiveDate" ColumnName="ActiveDate" />
+                <ScalarProperty Name="LanguageType" ColumnName="LanguageType" />
+                <ScalarProperty Name="EngKeyID" ColumnName="EngKeyID" />
+                <ScalarProperty Name="CreatedUserID" ColumnName="CreatedUserID" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ModifiedUserID" ColumnName="ModifiedUserID" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="EffectiveDate" ColumnName="EffectiveDate" />
+                <ScalarProperty Name="CurrencyCulture" ColumnName="CurrencyCulture" />
+                <ScalarProperty Name="V4RID" ColumnName="V4RID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HCM_DESIGNATIONS">
+            <EntityTypeMapping TypeName="V5Model.HCM_DESIGNATIONS">
+              <MappingFragment StoreEntitySet="HCM_DESIGNATIONS">
+                <ScalarProperty Name="RID" ColumnName="RID" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Title2" ColumnName="Title2" />
+                <ScalarProperty Name="TitleAlias" ColumnName="TitleAlias" />
+                <ScalarProperty Name="Includelist" ColumnName="Includelist" />
+                <ScalarProperty Name="Excludelist" ColumnName="Excludelist" />
+                <ScalarProperty Name="MinCTC" ColumnName="MinCTC" />
+                <ScalarProperty Name="MaxCTC" ColumnName="MaxCTC" />
+                <ScalarProperty Name="AvgCTC" ColumnName="AvgCTC" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="LanguageType" ColumnName="LanguageType" />
+                <ScalarProperty Name="EngKeyID" ColumnName="EngKeyID" />
+                <ScalarProperty Name="CreatedUserID" ColumnName="CreatedUserID" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ModifiedUserID" ColumnName="ModifiedUserID" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="EffectiveDate" ColumnName="EffectiveDate" />
+                <ScalarProperty Name="TID" ColumnName="TID" />
+                <ScalarProperty Name="RefID" ColumnName="RefID" />
+                <ScalarProperty Name="isintegrated" ColumnName="isintegrated" />
+                <ScalarProperty Name="IsReqDesignation" ColumnName="IsReqDesignation" />
+                <ScalarProperty Name="JobCodeCharacter" ColumnName="JobCodeCharacter" />
+                <ScalarProperty Name="Factor" ColumnName="Factor" />
+                <ScalarProperty Name="V4RID" ColumnName="V4RID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HCM_EDUCATION">
+            <EntityTypeMapping TypeName="V5Model.HCM_EDUCATION">
+              <MappingFragment StoreEntitySet="HCM_EDUCATION">
+                <ScalarProperty Name="RID" ColumnName="RID" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="IncludeAlias" ColumnName="IncludeAlias" />
+                <ScalarProperty Name="ExcludeAlias" ColumnName="ExcludeAlias" />
+                <ScalarProperty Name="YearsOfEdu" ColumnName="YearsOfEdu" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="LanguageType" ColumnName="LanguageType" />
+                <ScalarProperty Name="EngKeyID" ColumnName="EngKeyID" />
+                <ScalarProperty Name="CreatedUserID" ColumnName="CreatedUserID" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ModifiedUserID" ColumnName="ModifiedUserID" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="RefID" ColumnName="RefID" />
+                <ScalarProperty Name="EffectiveDate" ColumnName="EffectiveDate" />
+                <ScalarProperty Name="TID" ColumnName="TID" />
+                <ScalarProperty Name="EduGroupID" ColumnName="EduGroupID" />
+                <ScalarProperty Name="V4RID" ColumnName="V4RID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HCM_LOCATIONS">
+            <EntityTypeMapping TypeName="V5Model.HCM_LOCATIONS">
+              <MappingFragment StoreEntitySet="HCM_LOCATIONS">
+                <ScalarProperty Name="RID" ColumnName="RID" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="PinCode" ColumnName="PinCode" />
+                <ScalarProperty Name="IncludeAlias" ColumnName="IncludeAlias" />
+                <ScalarProperty Name="ExcludeAlias" ColumnName="ExcludeAlias" />
+                <ScalarProperty Name="StateID" ColumnName="StateID" />
+                <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+                <ScalarProperty Name="ZoneID" ColumnName="ZoneID" />
+                <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+                <ScalarProperty Name="IsMetro" ColumnName="IsMetro" />
+                <ScalarProperty Name="LocationType" ColumnName="LocationType" />
+                <ScalarProperty Name="RefID" ColumnName="RefID" />
+                <ScalarProperty Name="STDCode" ColumnName="STDCode" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="BaseLocationID" ColumnName="BaseLocationID" />
+                <ScalarProperty Name="LanguageType" ColumnName="LanguageType" />
+                <ScalarProperty Name="EngKeyID" ColumnName="EngKeyID" />
+                <ScalarProperty Name="CreatedUserID" ColumnName="CreatedUserID" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ModifiedUserID" ColumnName="ModifiedUserID" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="EffectiveDate" ColumnName="EffectiveDate" />
+                <ScalarProperty Name="IsCompany" ColumnName="IsCompany" />
+                <ScalarProperty Name="TID" ColumnName="TID" />
+                <ScalarProperty Name="IsDataSync" ColumnName="IsDataSync" />
+                <ScalarProperty Name="LastDataSyncDate" ColumnName="LastDataSyncDate" />
+                <ScalarProperty Name="LocationCategoryID" ColumnName="LocationCategoryID" />
+                <ScalarProperty Name="V4RID" ColumnName="V4RID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HCM_SKILLS">
+            <EntityTypeMapping TypeName="V5Model.HCM_SKILLS">
+              <MappingFragment StoreEntitySet="HCM_SKILLS">
+                <ScalarProperty Name="RID" ColumnName="RID" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="RefID" ColumnName="RefID" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="IncludeAlias" ColumnName="IncludeAlias" />
+                <ScalarProperty Name="ExcludeAlias" ColumnName="ExcludeAlias" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="LanguageType" ColumnName="LanguageType" />
+                <ScalarProperty Name="EngKeyID" ColumnName="EngKeyID" />
+                <ScalarProperty Name="CreatedUserID" ColumnName="CreatedUserID" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ModifiedUserID" ColumnName="ModifiedUserID" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="EffectiveDate" ColumnName="EffectiveDate" />
+                <ScalarProperty Name="TID" ColumnName="TID" />
+                <ScalarProperty Name="SkillGroupID" ColumnName="SkillGroupID" />
+                <ScalarProperty Name="V4RID" ColumnName="V4RID" />
+                <ScalarProperty Name="V3V4RID" ColumnName="V3V4RID" />
+                <ScalarProperty Name="isMigrated" ColumnName="isMigrated" />
+                <ScalarProperty Name="MigratedDataFrom" ColumnName="MigratedDataFrom" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HCM_GENDER">
+            <EntityTypeMapping TypeName="V5Model.HCM_GENDER">
+              <MappingFragment StoreEntitySet="HCM_GENDER">
+                <ScalarProperty Name="TID" ColumnName="TID" />
+                <ScalarProperty Name="EffectiveDate" ColumnName="EffectiveDate" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="ModifiedUserID" ColumnName="ModifiedUserID" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="CreatedUserID" ColumnName="CreatedUserID" />
+                <ScalarProperty Name="EngKeyID" ColumnName="EngKeyID" />
+                <ScalarProperty Name="LanguageType" ColumnName="LanguageType" />
+                <ScalarProperty Name="RefID" ColumnName="RefID" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="RID" ColumnName="RID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HCM_UNIVERSITY_GROUP">
+            <EntityTypeMapping TypeName="V5Model.HCM_UNIVERSITY_GROUP">
+              <MappingFragment StoreEntitySet="HCM_UNIVERSITY_GROUP">
+                <ScalarProperty Name="V4RID" ColumnName="V4RID" />
+                <ScalarProperty Name="IsBlackListed" ColumnName="IsBlackListed" />
+                <ScalarProperty Name="TID" ColumnName="TID" />
+                <ScalarProperty Name="EffectiveDate" ColumnName="EffectiveDate" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="ModifiedUserID" ColumnName="ModifiedUserID" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="CreatedUserID" ColumnName="CreatedUserID" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="EngKeyID" ColumnName="EngKeyID" />
+                <ScalarProperty Name="LanguageType" ColumnName="LanguageType" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="RefID" ColumnName="RefID" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="RID" ColumnName="RID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HCM_COMMON_MASTER">
+            <EntityTypeMapping TypeName="V5Model.HCM_COMMON_MASTER">
+              <MappingFragment StoreEntitySet="HCM_COMMON_MASTER">
+                <ScalarProperty Name="ControlNo" ColumnName="ControlNo" />
+                <ScalarProperty Name="SequenceNo" ColumnName="SequenceNo" />
+                <ScalarProperty Name="NoOfEntries" ColumnName="NoOfEntries" />
+                <ScalarProperty Name="ConstValue" ColumnName="ConstValue" />
+                <ScalarProperty Name="RefType" ColumnName="RefType" />
+                <ScalarProperty Name="TID" ColumnName="TID" />
+                <ScalarProperty Name="EffectiveDate" ColumnName="EffectiveDate" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="EngKeyID" ColumnName="EngKeyID" />
+                <ScalarProperty Name="LanguageType" ColumnName="LanguageType" />
+                <ScalarProperty Name="RefID" ColumnName="RefID" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="RID" ColumnName="RID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
